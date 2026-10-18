@@ -1,24 +1,32 @@
 <!DOCTYPE html>
+<!-- Documento HTML5; el idioma espanol ayuda a navegadores y lectores de pantalla. -->
 <html lang="es">
 <head>
+    <!-- Codificacion, adaptacion a pantallas, descripcion para buscadores y titulo de la pestana. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Instituto Nacional Ernesto Flores, El Triunfo, Usulután. Conoce nuestros programas educativos y recursos.">
     <title>Instituto Nacional Ernesto Flores</title>
+    <!-- Conecta este documento con las reglas visuales que estan en style.css. -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Encabezado del sitio, con la marca y la navegacion principal. -->
     <header class="barra_navegacion" id="inicio">
+        <!-- Enlace a inicio que agrupa el escudo y el nombre del instituto. -->
         <a class="marca_barra" href="#inicio" aria-label="INEF, inicio">
             <img src="Logos,Imagenes/INEF%20Logo.jpg" alt="Escudo del Instituto Nacional Ernesto Flores">
             <span class="Letras-titulo">Instituto Nacional "Ernesto Flores"</span>
         </a>
+        <!-- Casilla que CSS utiliza para abrir o cerrar el menu en pantallas pequenas. -->
         <input class="checkbox_menu_navegacion" id="menu-toggle" type="checkbox" aria-label="Menú de navegación">
+        <!-- Etiqueta asociada a la casilla; sus tres lineas forman el boton hamburguesa. -->
         <label class="toggle_barra" for="menu-toggle" aria-hidden="true">
             <span></span>
             <span></span>
             <span></span>
         </label>
+        <!-- Enlaces internos: cada href apunta al id de una seccion de esta pagina. -->
         <nav class="navegacion_barra" id="nav-principal" aria-label="Navegación principal">
             <ul class="enlaces_barra">
                 <li><a href="#inicio">Inicio</a></li>
@@ -31,20 +39,35 @@
             </ul>
         </nav>
     </header>
+    <!-- Contenido central: columna lateral de noticias y area principal. -->
     <main class="contenedor_medio">
+        <!-- Resumen lateral de noticias; aria-labelledby conecta el titulo con el panel. -->
         <aside class="barra_lateral" aria-labelledby="side-news-title">
             <h2 class="titulo_lateral" id="side-news-title">Noticias</h2>
             <p class="descripcion_noticias_lateral">Avisos y novedades del Instituto Nacional Ernesto Flores.</p>
-            <a href="#noticias">Ver noticias</a>
+            <h3>Avisos</h3>
+            <ul>
+                <li>Estamos a 2 semanas de terminar el año escolar.</li>
+                <li>Se realizó un simulacro de terremoto esta semana.</li>
+            </ul>
+            <img class="imagen_simulacro imagen_simulacro--side" src="Instalaciones/Simulacro%20Terremoto%202.jpg" alt="Estudiantes practican cómo protegerse durante un simulacro de terremoto">
+            <h3>Noticias</h3>
+            <ul>
+                <li>La semana pasada ocurrió el simulacro de terremoto.</li>
+                <li>El 15 de septiembre se celebró el aniversario de la independencia.</li>
+            </ul>
         </aside>
+        <!-- Contenido principal del sitio, identificado por su encabezado de bienvenida. -->
         <section class="contenido_principal" aria-labelledby="welcome-title">
+            <!-- Presentacion del instituto y galeria de fotografias de sus instalaciones. -->
             <header class="banner_principal">
                 <div class="contenido_banner_principal">
                     <p class="etiqueta">El Triunfo · Usulután</p>
                     <h1 id="welcome-title">Instituto Nacional Ernesto Flores</h1>
-                    <p class="descripcion_banner_principal">Conoce nuestra oferta académica y recursos educativos.</p>
                 </div>
+                <!-- Carrusel controlado sin JavaScript: cada radio representa una foto. -->
                 <div class="carrusel-container" role="region" aria-label="Galería de las instalaciones del instituto">
+                    <!-- Todos comparten name para que solo se pueda seleccionar una diapositiva. -->
                     <input type="radio" name="carrusel-instalaciones" id="instalacion-1" aria-label="Mostrar foto 1" checked>
                     <input type="radio" name="carrusel-instalaciones" id="instalacion-2" aria-label="Mostrar foto 2">
                     <input type="radio" name="carrusel-instalaciones" id="instalacion-3" aria-label="Mostrar foto 3">
@@ -52,15 +75,17 @@
                     <input type="radio" name="carrusel-instalaciones" id="instalacion-5" aria-label="Mostrar foto 5">
                     <input type="radio" name="carrusel-instalaciones" id="instalacion-6" aria-label="Mostrar foto 6">
                     <input type="radio" name="carrusel-instalaciones" id="instalacion-7" aria-label="Mostrar foto 7">
+                    <!-- La tira horizontal contiene las imagenes; CSS la desplaza segun el radio activo. -->
                     <div class="carrusel-slide">
                         <div class="slide"><img src="Instalaciones/Instalaciones 1.webp" alt="Jardín y áreas verdes del instituto"></div>
                         <div class="slide"><img src="Instalaciones/Instalaciones 2.webp" alt="Actividad cultural en las instalaciones del instituto"></div>
                         <div class="slide"><img src="Instalaciones/Instalaciones 5.webp" alt="Estudiantes durante una actividad académica"></div>
-                        <div class="slide"><img src="Instalaciones/Instalaciones 6.webp" alt="Estudiantes trabajando en el área agropecuaria"></div>
-                        <div class="slide"><img src="Instalaciones/Instalaciones 7.webp" alt="Jornada de trabajo y apoyo comunitario"></div>
                         <div class="slide"><img src="Instalaciones/Instalciones 4.jpg" alt="Entrada y jardines del instituto"></div>
                         <div class="slide"><img src="Instalaciones/unnamed.webp" alt="Patio y áreas verdes del instituto"></div>
+                        <div class="slide"><img src="Instalaciones/Simulacro%20Terremoto%202.jpg" alt="Estudiantes practican cómo protegerse durante un simulacro de terremoto"></div>
+                        <div class="slide"><img src="Instalaciones/Simulacro%20Terremoto.jpg" alt="Personal brinda primeros auxilios durante el simulacro de terremoto"></div>
                     </div>
+                    <!-- Cada etiqueta selecciona el radio correspondiente y funciona como punto de navegacion. -->
                     <div class="carrusel-navegacion" aria-label="Seleccionar foto">
                         <label for="instalacion-1" class="nav-dot" aria-label="Foto 1"></label>
                         <label for="instalacion-2" class="nav-dot" aria-label="Foto 2"></label>
@@ -72,23 +97,37 @@
                     </div>
                 </div>
             </header>
+            <!-- Tres tarjetas breves para contenido institucional, avisos y noticias. -->
             <section class="tarjetas_contenido tarjetas_contenido--tres" aria-label="Contenido institucional y noticias">
                 <article class="tarjeta_contenido">
-                    <span class="etiqueta_tarjeta">Instituto</span>
                     <h3>Contenido</h3>
                     <p>Mensaje de la institución.</p>
+                    <ul>
+                        <li>El instituto ofrece una educación integral y de calidad.</li>
+                        <li>Se promueve la investigación y el desarrollo de proyectos.</li>
+                        <li>Se fomenta la participación activa de la comunidad educativa.</li>
+                    </ul>
                 </article>
                 <article class="tarjeta_contenido" id="avisos">
-                    <span class="etiqueta_tarjeta">Comunicados</span>
                     <h3>Avisos</h3>
-                    <p>Avisos importantes para la comunidad educativa.</p>
+                    <p>Avisos importantes</p>
+                    <ul>
+                        <li>Estamos a 2 semanas de terminar el año escolar.</li>
+                        <li>Se realizó un simulacro de terremoto esta semana.</li>
+                    </ul>
+                   
                 </article>
                 <article class="tarjeta_contenido" id="noticias">
-                    <span class="etiqueta_tarjeta">Actualidad</span>
                     <h3>Noticias</h3>
-                    <p>Avisos y novedades del Instituto Nacional Ernesto Flores.</p>
+                    <p>Últimas noticias del instituto.</p>
+                    <ul>
+                        <li>La semana pasada ocurrió el simulacro de terremoto.</li>
+                        <li>El 15 de septiembre se celebró el aniversario de la independencia.</li>
+                    </ul>
+                    <img class="imagen_simulacro imagen_simulacro--noticia" src="Instalaciones/Simulacro%20Terremoto.jpg" alt="Personal brinda primeros auxilios durante el simulacro de terremoto">
                 </article>
             </section>
+            <!-- Oferta academica: cada articulo describe uno de los bachilleratos disponibles. -->
             <section class="grupo_programas" id="programas" aria-labelledby="bachilleratos-title">
                 <h2 id="bachilleratos-title">Bachilleratos</h2>
                 <div class="tarjetas_contenido tarjetas_contenido--cuatro">
@@ -110,36 +149,50 @@
                     </article>
                 </div>
             </section>
+            <!-- Informacion institucional agrupada en tarjetas con anclas para valores y calendario. -->
             <section class="grupo_programas" id="mision-vision" aria-labelledby="institucional-title">
                 <h2 id="institucional-title">Información institucional</h2>
                 <div class="tarjetas_contenido tarjetas_contenido--cuatro">
                     <article class="tarjeta_contenido">
-                        <span class="etiqueta_tarjeta">Instituto</span>
                         <h3>Misión</h3>
                         <p>Somos un centro educativo líder en la investigación, profesionalización y ejecución de proyectos, basado en la planificación por competencias, para mejorar su entorno ambiental, calidad, capacidad crítica y reflexiva, y transformar la sociedad, logrando una excelencia académica, calidad humana y la preparación para la vida.</p>
                     </article>
                     <article class="tarjeta_contenido">
-                        <span class="etiqueta_tarjeta">Instituto</span>
                         <h3>Visión</h3>
                         <p>Ser un centro educativo líder en la organización, ambiente agradable, con tecnología innovadora, alto rendimiento académico, excelente actitud disciplinaria y competente en la investigación, profesionalización y ejecución de proyectos funcionales.</p>
                     </article>
                     <article class="tarjeta_contenido" id="valores">
-                        <span class="etiqueta_tarjeta">Comunidad</span>
                         <h3>Valores</h3>
                         <p>Principios que orientan la convivencia y el aprendizaje.</p>
+                        <ul>
+                            <li>Respeto: Valoramos la diversidad y tratamos a todos con dignidad.</li>
+                            <li>Responsabilidad: Cumplimos con nuestras obligaciones y asumimos las consecuencias de nuestras acciones.</li>
+                            <li>Solidaridad: Apoyamos a los demás y trabajamos juntos para alcanzar objetivos comunes.</li>
+                            <li>Honestidad: Actuamos con integridad y transparencia en todas nuestras acciones.</li>
+                            <li>Compromiso: Nos dedicamos plenamente a nuestras metas y al bienestar de la comunidad educativa.</li>
+                        </ul>
                     </article>
                     <article class="tarjeta_contenido" id="calendario">
-                        <span class="etiqueta_tarjeta">Actividades</span>
                         <h3>Calendario</h3>
                         <p>Fechas y actividades académicas.</p>
+                        <ul>
+                            <li>Inicio de clases: 1 de febrero</li>
+                            <li>Celebración de la independencia: 15 de septiembre</li>
+                            <li>Celebración del día de las madres: 10 de mayo</li>
+                            <li>Evento miss independencia: 10 de septiembre</li>
+                            <li>Fin de clases: 13 de noviembre</li>
+                            <li>Entrega de boletines: 20 de noviembre</li>
+                        </ul>
                     </article>
                 </div>
             </section>
         </section>
     </main>
+    <!-- Pie de pagina con paneles desplegables, informacion de contacto y creditos. -->
     <footer class="pie_pagina" id="contactos">
         <div class="info_pie">
             <div class="fila_pie">
+                <!-- details y summary crean un desplegable nativo, sin JavaScript. -->
                 <details class="desplegable_contactos">
                     <summary>Contactos</summary>
                     <div class="menu_contactos">
@@ -152,11 +205,13 @@
                     </div>
                 </details>
 
+                <!-- Segundo desplegable con accesos a plataformas educativas externas. -->
                 <details class="desplegable_contactos desplegable_enlaces">
                     <summary>Enlaces educativos</summary>
                     <div class="menu_contactos">
                         <ul class="lista_contactos lista_enlaces">
                             <li>
+                                <!-- El logo tiene texto alternativo y el enlace lleva al servicio correspondiente. -->
                                 <a class="enlace_con_logo" href="https://classroom.google.com/">
                                     <img class="logo_enlace" src="Logos,Imagenes/descarga.jpg" alt="Logo de Classroom">
                                     <span>Classroom</span>
@@ -184,6 +239,7 @@
                     </div>
                 </details>
             </div>
+            <!-- Creditos de autoria que aparecen al final del pie de pagina. -->
             <p>Derechos de autor © Luis Enrique Carranza | Victor Enmanuel Ventura</p>
         </div>
     </footer>

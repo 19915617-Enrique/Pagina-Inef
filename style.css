@@ -1,6 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+/* Carga Merriweather para los titulos del sitio. */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;600;700;800&display=swap');
 
-:root {
+/* Variables de color reutilizables en los estilos base. */
+*{
     --text-body: #20354b;
     --text-muted: #2d3747;
     --text-title: #153d5d;
@@ -12,11 +14,13 @@
     --accent-green: #4d8c52;
 }
 
+/* Ajustes generales del documento y desplazamiento suave entre secciones. */
 html {
     min-height: 100%;
     scroll-behavior: smooth;
 }
 
+/* Primera distribucion de la pagina: barra superior, contenido y pie. */
 body {
     min-height: 100vh;
     display: grid;
@@ -39,6 +43,7 @@ body {
     font-weight: 500;
 }
 
+/* Tipografia y espaciado comunes para encabezados y textos. */
 h1,
 h2,
 h3,
@@ -73,6 +78,22 @@ li,
     letter-spacing: 0.01em;
 }
 
+/* Apariencia inicial de todos los encabezados h2. */
+h2{
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 rgb(255 255 255 / 80%);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    text-decoration-color: rgb(43 76 140 / 20%);
+    text-align: center;
+    color: var(--text-title);
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    
+}
+
+/* Barra superior y distribucion de marca y navegacion. */
 .barra_navegacion {
     grid-area: navbar;
     display: flex;
@@ -86,6 +107,7 @@ li,
     box-shadow: 0 10px 20px rgb(8 18 30 / 20%);
 }
 
+/* Texto de la marca en la barra. */
 .Letras-titulo{
     color: var(--text-brand);
     font-family: Georgia, "Times New Roman", serif;
@@ -95,6 +117,7 @@ li,
     text-align: center;
 }
 
+/* Contenedor circular inicial del escudo. */
 .marca_barra {
     display: block;
     flex: 0 0 auto;
@@ -105,6 +128,7 @@ li,
     background: rgba(255, 255, 255, 0.08);
 }
 
+/* Ajusta el escudo para que quepa dentro de su contenedor. */
 .marca_barra img {
     display: block;
     width: 100%;
@@ -112,10 +136,12 @@ li,
     object-fit: contain;
 }
 
+/* Evita que el area de navegacion se desborde en la barra. */
 .barra_navegacion nav {
     min-width: 0;
 }
 
+/* Lista horizontal de enlaces de navegacion. */
 .enlaces_barra {
     display: flex;
     flex-wrap: wrap;
@@ -127,6 +153,7 @@ li,
     list-style: none;
 }
 
+/* Apariencia de cada enlace y respuesta al puntero o teclado. */
 .enlaces_barra a {
     display: block;
     padding: 0.55rem 0.2rem;
@@ -148,6 +175,7 @@ li,
     outline-offset: 3px;
 }
 
+/* Distribuye la columna lateral y el contenido principal. */
 .contenedor_medio {
     grid-area: middle;
     display: grid;
@@ -157,6 +185,7 @@ li,
     min-height: 0;
 }
 
+/* Panel lateral de noticias. */
 .barra_lateral {
     grid-area: side;
     padding: 1.2rem 1rem;
@@ -168,7 +197,7 @@ li,
 .titulo_lateral {
     margin: 0 0 1rem;
     color: #183044;
-    font-size: 0.95rem;
+    font-size: 1.15rem;
     font-weight: 800;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -189,6 +218,7 @@ li,
     list-style: none;
 }
 
+/* Enlaces del panel lateral y su estado al pasar el puntero o enfocarlos. */
 .barra_lateral a {
     color: #1a2430;
     font-size: 0.95rem;
@@ -206,6 +236,7 @@ li,
     transform: translateX(2px);
 }
 
+/* Panel que contiene el banner, las noticias y las secciones. */
 .contenido_principal {
     grid-area: main;
     display: grid;
@@ -220,6 +251,7 @@ li,
     box-shadow: 0 12px 22px rgb(20 18 16 / 12%);
 }
 
+/* Banner de bienvenida: borde, fondo y alineacion de sus elementos. */
 .banner_principal {
     display: flex;
     align-items: center;
@@ -232,6 +264,7 @@ li,
     border-radius: 8px;
 }
 
+/* Etiquetas pequeñas que identifican el lugar o la categoria. */
 .etiqueta {
     display: inline-block;
     margin-bottom: 0.2rem;
@@ -242,6 +275,7 @@ li,
     text-transform: uppercase;
 }
 
+/* Titulo principal del banner. */
 .banner_principal h1 {
     margin: 0;
     color: var(--text-title);
@@ -249,6 +283,7 @@ li,
     line-height: 1.2;
 }
 
+/* Cuadricula inicial de tarjetas y variante de dos columnas. */
 .tarjetas_contenido {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -261,6 +296,7 @@ li,
     align-items: stretch;
 }
 
+/* Estilo base de cada tarjeta: estructura, espacio, fondo y transicion. */
 .tarjeta_contenido {
     display: flex;
     flex-direction: column;
@@ -282,6 +318,7 @@ li,
     border-color: rgb(43 76 140 / 22%);
 }
 
+/* Colores diferenciados para las primeras cuatro tarjetas de cada grupo. */
 .tarjeta_contenido:nth-child(1) {
     background: linear-gradient(180deg, rgb(239 247 255 / 98%), rgb(255 255 255 / 96%));
 }
@@ -301,6 +338,7 @@ li,
     background: linear-gradient(180deg, rgb(255 249 231 / 98%), rgb(255 255 255 / 96%));
 }
 
+/* Titulos, texto destacado y parrafos dentro de las tarjetas. */
 .tarjeta_contenido h3 {
     margin: 0;
     color: var(--text-title);
@@ -327,19 +365,7 @@ li,
     text-align: left;
 }
 
-.etiqueta_tarjeta {
-    display: inline-block;
-    margin-bottom: 0.7rem;
-    padding: 0.2rem 0.55rem;
-    border-radius: 999px;
-    background: rgb(43 76 140 / 9%);
-    color: var(--accent-blue);
-    font-size: 0.68rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
-
+/* Reglas adicionales para subtitulos, listas, enlaces y parrafos de tarjeta. */
 .tarjeta_contenido h2 {
     margin: 0 0 0.75rem;
     font-size: 1.06rem;
@@ -381,6 +407,7 @@ li,
     text-decoration: underline;
 }
 
+/* Estructura inicial del pie de pagina. */
 .pie_pagina {
     grid-area: bottom;
     display: grid;
@@ -394,6 +421,7 @@ li,
     box-shadow: 0 -10px 18px rgb(0 0 0 / 15%);
 }
 
+/* Alineacion de los datos del pie y sus grupos. */
 .info_pie {
     display: flex;
     flex-direction: column;
@@ -415,6 +443,7 @@ li,
     align-items: flex-start;
 }
 
+/* Acordeones nativos de contactos y enlaces: summary funciona como boton. */
 .desplegable_contactos {
     display: inline-block;
     width: auto;
@@ -444,6 +473,7 @@ li,
     transform: translateY(-1px);
 }
 
+/* Espaciado y presentacion de los datos desplegados. */
 .menu_contactos {
     margin-top: 0.45rem;
     padding-top: 0.1rem;
@@ -478,6 +508,7 @@ li,
     font-weight: 700;
 }
 
+/* Enlaces educativos con sus logos e imagenes. */
 .contenedor_enlaces {
     display: flex;
     align-items: flex-start;
@@ -536,6 +567,7 @@ li,
     font-family: "Broadway", "Arial Black", sans-serif;
 }
 
+/* Apariencia general y estados de los enlaces del pie de pagina. */
 .pie_pagina a {
     display: block;
     padding: 0.55rem 0.2rem;
@@ -552,6 +584,7 @@ li,
     text-underline-offset: 0.2em;
 }
 
+/* Adaptacion inicial para telefonos: una columna y enlaces mas compactos. */
 @media (max-width: 540px) {
     .barra_navegacion {
         align-items: flex-start;
@@ -594,13 +627,15 @@ li,
     }
 }
 
+/* Desactiva el desplazamiento animado si el usuario reduce movimiento. */
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
     }
 }
 
-/* Updated institutional layout */
+/* Capa anterior de diseno institucional. Algunas reglas apuntan a clases que
+    no aparecen en el HTML actual; se conservan, pero no afectan esos elementos. */
 body {
     display: flex;
     flex-direction: column;
@@ -674,6 +709,7 @@ body {
     color: #18835e;
 }
 
+/* Indicadores visibles de foco para navegar con teclado. */
 .enlaces_barra a:focus-visible,
 .pie_pagina a:focus-visible,
 .enlace_bienvenida:focus-visible,
@@ -682,6 +718,7 @@ body {
     outline-offset: 4px;
 }
 
+/* Estilos de una portada alternativa; solo se aplican si esas clases existen. */
 .bienvenida {
     position: relative;
     display: flex;
@@ -752,6 +789,7 @@ body {
     font-size: 1.1rem;
 }
 
+/* Estilos de una seccion alternativa de programas y sus tarjetas. */
 .programas {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
@@ -818,6 +856,7 @@ body {
     border-left-color: #b94b52;
 }
 
+/* Estilos de enlaces a plataformas educativas en la capa alternativa. */
 .enlace_aula {
     display: flex;
     align-items: center;
@@ -864,6 +903,7 @@ body {
     font-size: 1.2rem;
 }
 
+/* Version alternativa del pie de pagina institucional. */
 .pie_pagina {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
@@ -906,6 +946,7 @@ body {
     color: #f0c75e;
 }
 
+/* Ajustes responsive de la capa institucional alternativa. */
 @media (max-width: 760px) {
     .barra_navegacion {
         justify-content: center;
@@ -974,7 +1015,7 @@ body {
     }
 }
 
-/* Restore the original grid layout for the navigation, sidebar, and main content. */
+/* Sobrescribe la capa anterior y recupera la cuadricula usada por el HTML actual. */
 body {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
@@ -1047,6 +1088,7 @@ body {
     line-height: 1.4;
 }
 
+/* Ajustes intermedios de la barra y tarjetas para pantallas pequenas. */
 @media (max-width: 760px) {
     .barra_navegacion {
         flex-wrap: wrap;
@@ -1065,11 +1107,13 @@ body {
     }
 }
 
+/* Cambia el fondo general a una fotografia de las instalaciones. */
 body {
     background-color: #244d46;
     background-image: linear-gradient(135deg, rgb(22 75 58 / 63%), rgb(28 67 82 / 58%)), url("Instalaciones/Instalaciones%201.webp");
 }
 
+/* Colores de paneles y tamanos de tarjetas de la pagina actual. */
 .barra_lateral {
     background: #e9f3ec;
 }
@@ -1128,10 +1172,7 @@ body {
     line-height: 1.7;
 }
 
-.etiqueta_tarjeta {
-    font-size: 0.74rem;
-}
-
+/* Reduce el alto minimo de las tarjetas en pantallas pequenas. */
 @media (max-width: 540px) {
     .tarjetas_contenido {
         grid-auto-rows: minmax(220px, auto);
@@ -1143,6 +1184,7 @@ body {
     }
 }
 
+/* Control hamburguesa: se oculta en escritorio y aparece en movil. */
 .toggle_barra {
     display: none;
     width: 44px;
@@ -1174,6 +1216,7 @@ body {
     object-fit: contain;
 }
 
+/* Las tres lineas del boton se convierten en una X cuando el menu esta abierto. */
 .toggle_barra span {
     display: block;
     width: 100%;
@@ -1199,6 +1242,7 @@ body {
     outline-offset: 3px;
 }
 
+/* Comportamiento movil del menu: boton visible y enlaces inicialmente ocultos. */
 @media (max-width: 760px) {
     .barra_navegacion {
         flex-direction: row;
@@ -1247,6 +1291,7 @@ body {
     }
 }
 
+/* El panel principal apila sus secciones y el banner coloca titulo sobre imagen. */
 .contenido_principal {
     grid-template-rows: auto auto auto auto;
     align-content: start;
@@ -1265,6 +1310,7 @@ body {
 }
 
 
+/* Espaciado y encabezado de cada grupo de programas o informacion institucional. */
 .grupo_programas {
     display: grid;
     gap: 0.75rem;
@@ -1274,7 +1320,7 @@ body {
 .grupo_programas > h2 {
     margin: 0;
     color: #183044;
-    font-size: 1.1rem;
+    font-size: 1.35rem;
 }
 
 .tarjetas_contenido--dos,
@@ -1288,9 +1334,10 @@ body {
 
 .tarjeta_contenido h3 {
     margin: 0 0 0.75rem;
-    font-size: 1.06rem;
+    font-size: 1.3rem;
 }
 
+/* En movil las tarjetas quedan en una columna; en tablet algunas usan dos. */
 @media (max-width: 540px) {
     .banner_principal {
         grid-template-columns: minmax(0, 1fr);
@@ -1318,6 +1365,7 @@ body {
     }
 }
 
+/* Posicion del menu desplegable y lista vertical de enlaces en movil. */
 .toggle_barra {
     display: grid;
     align-content: center;
@@ -1369,6 +1417,7 @@ body {
     color: #f7f9fb;
 }
 
+/* Tipografia final para los encabezados y titulos del sitio. */
 h1,
 h2,
 h3,
@@ -1377,10 +1426,14 @@ h5,
 h6,
 .Letras-titulo,
 .marca_barra,
-.tarjeta_programa {
-    font-family: "Montserrat", sans-serif;
+.tarjeta_programa,
+.tarjeta_contenido h3 {
+    font-family: "Merriweather", Georgia, serif;
+    font-weight: 800;
+    text-align: center;
 }
 
+/* Presentacion final del encabezado del banner y centrado del titulo. */
 .banner_principal {
     grid-template-columns: minmax(0, 1fr);
     gap: 1.5rem;
@@ -1395,6 +1448,7 @@ h6,
     text-align: center;
 }
 
+/* Carrusel: marco, proporcion de imagen y recorte de las diapositivas. */
 .carrusel-container {
     position: relative;
     width: 100%;
@@ -1434,6 +1488,7 @@ h6,
     object-fit: cover;
 }
 
+/* Cada radio seleccionado desplaza la tira para mostrar una de las siete fotos. */
 #instalacion-1:checked ~ .carrusel-slide { transform: translateX(0); }
 #instalacion-2:checked ~ .carrusel-slide { transform: translateX(-14.2857%); }
 #instalacion-3:checked ~ .carrusel-slide { transform: translateX(-28.5714%); }
@@ -1442,6 +1497,7 @@ h6,
 #instalacion-6:checked ~ .carrusel-slide { transform: translateX(-71.4286%); }
 #instalacion-7:checked ~ .carrusel-slide { transform: translateX(-85.7143%); }
 
+/* Puntos de navegacion superpuestos en la parte inferior del carrusel. */
 .carrusel-navegacion {
     position: absolute;
     right: 0;
@@ -1466,6 +1522,7 @@ h6,
     background-color: rgb(255 255 255 / 80%);
 }
 
+/* Resalta el punto de la foto activa y muestra foco accesible para teclado. */
 #instalacion-1:checked ~ .carrusel-navegacion .nav-dot:nth-child(1),
 #instalacion-2:checked ~ .carrusel-navegacion .nav-dot:nth-child(2),
 #instalacion-3:checked ~ .carrusel-navegacion .nav-dot:nth-child(3),
@@ -1482,6 +1539,7 @@ h6,
     outline-offset: 3px;
 }
 
+/* Reduce el ancho maximo del carrusel en tabletas y moviles. */
 @media (max-width: 760px) {
     .banner_principal {
         grid-template-columns: minmax(0, 1fr);
@@ -1490,4 +1548,20 @@ h6,
     .carrusel-container {
         max-width: 560px;
     }
+}
+
+.imagen_simulacro {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.imagen_simulacro--side {
+    aspect-ratio: 4 / 3;
+    margin: 0.5rem 0 1rem;
+}
+
+.imagen_simulacro--noticia {
+    aspect-ratio: 16 / 9;
 }
