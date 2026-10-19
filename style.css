@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;600;700;800&display=swap');
 
 /* Variables de color reutilizables en los estilos base. */
-*{
+:root {
     --text-body: #20354b;
     --text-muted: #2d3747;
     --text-title: #153d5d;
@@ -12,6 +12,11 @@
     --accent-gold: #d2a449;
     --accent-blue: #2b4c8c;
     --accent-green: #4d8c52;
+    --font-primary: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --font-secondary: Georgia, "Times New Roman", serif;
+    --font-tertiary: "Merriweather", Georgia, serif;
+    --font-quaternary: "Broadway", "Arial Black", sans-serif;
+    --font-quinary: "Verdana Pro Black", Verdana, sans-serif;
 }
 
 /* Ajustes generales del documento y desplazamiento suave entre secciones. */
@@ -39,7 +44,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     color: var(--text-body);
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--font-primary);
     font-weight: 500;
 }
 
@@ -56,7 +61,7 @@ h6,
 .bienvenida h1,
 .programas h2,
 .titulo_lateral {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: var(--font-secondary);
     font-weight: 700;
     letter-spacing: 0.02em;
     line-height: 1.2;
@@ -72,7 +77,7 @@ li,
 .lista_contactos,
 .pie_pagina p,
 .pie_pagina a {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--font-primary);
     font-weight: 500;
     line-height: 1.7;
     letter-spacing: 0.01em;
@@ -88,7 +93,7 @@ h2{
     text-decoration-color: rgb(43 76 140 / 20%);
     text-align: center;
     color: var(--text-title);
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: var(--font-secondary);
     font-weight: 700;
     
 }
@@ -110,7 +115,7 @@ h2{
 /* Texto de la marca en la barra. */
 .Letras-titulo{
     color: var(--text-brand);
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: var(--font-secondary);
     font-size: 3rem;
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -564,7 +569,7 @@ h2{
     color: #fff;
     font-size: 0.68rem;
     font-weight: 800;
-    font-family: "Broadway", "Arial Black", sans-serif;
+    font-family: var(--font-quaternary);
 }
 
 /* Apariencia general y estados de los enlaces del pie de pagina. */
@@ -644,7 +649,7 @@ body {
     padding: 0;
     background: #f4f6f2;
     color: #183044;
-    font-family: "Verdana Pro Black", "Verdana", sans-serif;
+    font-family: var(--font-quinary);
     font-weight: 900;
 }
 
@@ -674,7 +679,7 @@ body {
     border-radius: 0;
     background: transparent;
     color: #153b52;
-    font-family: "Broadway", "Arial Black", sans-serif;
+    font-family: var(--font-quaternary);
     font-size: 0.98rem;
     font-weight: 700;
     line-height: 1.2;
@@ -765,7 +770,7 @@ body {
 .bienvenida h1 {
     max-width: 700px;
     margin: 0;
-    font-family: "Broadway", "Arial Black", sans-serif;
+    font-family: var(--font-quaternary);
     font-size: 3.5rem;
     font-weight: 500;
     line-height: 1.08;
@@ -806,7 +811,7 @@ body {
 .programas h2 {
     margin: 0 0 1rem;
     color: #153b52;
-    font-family: "Broadway", "Arial Black", sans-serif;
+    font-family: var(--font-quaternary);
     font-size: 2.4rem;
     font-weight: 500;
     line-height: 1.15;
@@ -838,7 +843,7 @@ body {
     border-left: 4px solid #18835e;
     background: #ffffff;
     color: #183044;
-    font-family: "Broadway", "Arial Black", sans-serif;
+    font-family: var(--font-quaternary);
     font-size: 1.12rem;
     font-weight: 700;
     line-height: 1.4;
@@ -919,7 +924,7 @@ body {
 
 .pie_pagina h2 {
     color: #ffffff;
-    font-family: "Broadway", "Arial Black", sans-serif;
+    font-family: var(--font-quaternary);
     font-size: 1.05rem;
     font-weight: 500;
 }
@@ -1033,7 +1038,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     color: #1a2430;
-    font-family: "Broadway", "Arial Black", sans-serif;
+    font-family: var(--font-quaternary);
 }
 
 .barra_navegacion {
@@ -1115,7 +1120,7 @@ body {
 
 /* Colores de paneles y tamanos de tarjetas de la pagina actual. */
 .barra_lateral {
-    background: #e9f3ec;
+    background: #e9f3ec; 
 }
 
 .contenido_principal {
@@ -1156,7 +1161,7 @@ body {
 
 .tarjeta_contenido h3 {
     color: #183b46;
-    font-family: "Broadway", "Arial Black", sans-serif;
+    font-family: var(--font-quaternary);
     font-size: 1.4rem;
     line-height: 1.25;
 }
@@ -1428,7 +1433,7 @@ h6,
 .marca_barra,
 .tarjeta_programa,
 .tarjeta_contenido h3 {
-    font-family: "Merriweather", Georgia, serif;
+    font-family: var(--font-tertiary);
     font-weight: 800;
     text-align: center;
 }
