@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap');
 
 /* Variables de color reutilizables en los estilos base. */
-:root {
+*{
     --text-body: #20354b;
     --text-muted: #2d3747;
     --text-title: #153d5d;
@@ -49,43 +49,8 @@ body {
     font-weight: 500;
 }
 
-/* Tipografia y espaciado comunes para encabezados y textos. */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.Letras-titulo,
-.marca_barra,
-.banner_principal h1,
-.bienvenida h1,
-.programas h2,
-.titulo_lateral {
-    font-family: var(--font-secondary);
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    line-height: 1.2;
-}
-
-p,
-li,
-.descripcion_noticias_lateral,
-.descripcion_banner_principal,
-.encabezado_programas > p:last-child,
-.tarjeta_contenido p,
-.tarjeta_contenido li,
-.lista_contactos,
-.pie_pagina p,
-.pie_pagina a {
-    font-family: var(--font-primary);
-    font-weight: 500;
-    line-height: 1.7;
-    letter-spacing: 0.01em;
-}
-
 /* Apariencia inicial de todos los encabezados h2. */
-h2{
+h2 {
     font-size: 1.25rem;
     text-transform: uppercase;
     text-shadow: 0 1px 0 rgb(255 255 255 / 80%);
@@ -94,9 +59,6 @@ h2{
     text-decoration-color: rgb(43 76 140 / 20%);
     text-align: center;
     color: var(--text-title);
-    font-family: var(--font-secondary);
-    font-weight: 700;
-    
 }
 
 /* Barra superior y distribucion de marca y navegacion. */
@@ -1739,4 +1701,37 @@ summary,
 .album_bachillerato summary,
 .nav-dot {
     font-family: var(--font-links);
+}
+
+/* Tipografia compartida por los encabezados del sitio. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.Letras-titulo,
+.marca_barra,
+.banner_principal h1,
+.bienvenida h1,
+.programas h2,
+.titulo_lateral {
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+}
+
+/* Tipografia base para texto, listas, descripciones y enlaces del pie. */
+p,
+li,
+.descripcion_noticias_lateral,
+.descripcion_banner_principal,
+.encabezado_programas > p:last-child,
+.lista_contactos,
+.pie_pagina a {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
 }
