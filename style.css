@@ -1,5 +1,5 @@
-/* Carga Merriweather para los titulos del sitio. */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;600;700;800&display=swap');
+/* Carga las tipografias del sitio. */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap');
 
 /* Variables de color reutilizables en los estilos base. */
 :root {
@@ -17,6 +17,7 @@
     --font-tertiary: "Merriweather", Georgia, serif;
     --font-quaternary: "Broadway", "Arial Black", sans-serif;
     --font-quinary: "Verdana Pro Black", Verdana, sans-serif;
+    --font-links: "Montserrat", sans-serif;
 }
 
 /* Ajustes generales del documento y desplazamiento suave entre secciones. */
@@ -223,6 +224,29 @@ h2{
     list-style: none;
 }
 
+.noticia_simulacro {
+    margin-top: 0.8rem;
+}
+
+.noticia_simulacro summary {
+    color: #1a4d3a;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.noticia_simulacro summary:hover,
+.noticia_simulacro summary:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.noticia_simulacro p {
+    margin: 0.6rem 0;
+    color: #2d3747;
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
 /* Enlaces del panel lateral y su estado al pasar el puntero o enfocarlos. */
 .barra_lateral a {
     color: #1a2430;
@@ -412,6 +436,50 @@ h2{
     text-decoration: underline;
 }
 
+.album_bachillerato {
+    margin-top: auto;
+    padding-top: 0.6rem;
+}
+
+.album_bachillerato summary {
+    color: #2b4c8c;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.album_bachillerato summary:hover,
+.album_bachillerato summary:focus-visible {
+    color: #b94b52;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.album_bachillerato_imagenes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+    margin-top: 0.7rem;
+}
+
+.tarjeta_contenido .album_bachillerato_imagenes a {
+    display: block;
+    min-width: 0;
+    margin: 0;
+}
+
+.album_bachillerato_imagenes img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.album_bachillerato_imagenes a:focus-visible {
+    outline: 2px solid #2b4c8c;
+    outline-offset: 2px;
+}
+
 /* Estructura inicial del pie de pagina. */
 .pie_pagina {
     grid-area: bottom;
@@ -496,8 +564,25 @@ h2{
     text-align: left;
 }
 
-.lista_contactos li {
+.desplegable_contactos .menu_contactos > p.lista_contactos {
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+.lista_datos_contacto li {
+    display: grid;
+    grid-template-columns: 18px minmax(0, 1fr);
+    align-items: start;
+    gap: 0.45rem;
     margin: 0;
+}
+
+.logo_contacto {
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+    margin-top: 0.1rem;
+    object-fit: contain;
 }
 
 .lista_contactos strong {
@@ -1639,4 +1724,19 @@ h6,
         height: 36px;
         padding: 8px;
     }
+}
+
+a,
+.pie_pagina a,
+.marca_barra,
+.marca_barra .Letras-titulo,
+.enlace_bienvenida,
+.enlace_aula,
+.enlace_con_logo,
+summary,
+.desplegable_contactos summary,
+.noticia_simulacro summary,
+.album_bachillerato summary,
+.nav-dot {
+    font-family: var(--font-links);
 }

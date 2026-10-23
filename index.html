@@ -42,17 +42,21 @@
         <aside class="barra_lateral" aria-labelledby="side-news-title">
             <h2 class="titulo_lateral" id="side-news-title">Noticias</h2>
             <p class="descripcion_noticias_lateral">Avisos y novedades del Instituto Nacional Ernesto Flores.</p>
-            <h3>Avisos</h3>
-            <ul>
-                <li>Estamos a 2 semanas de terminar el año escolar.</li>
-                <li>Se realizó un simulacro de terremoto esta semana.</li>
-            </ul>
-            <img class="imagen_simulacro imagen_simulacro--side" src="Instalaciones/Simulacro%20Terremoto%202.jpg" alt="Estudiantes practican cómo protegerse durante un simulacro de terremoto">
-            <h3>Noticias</h3>
-            <ul>
-                <li>La semana pasada ocurrió el simulacro de terremoto.</li>
-                <li>El 15 de septiembre se celebró el aniversario de la independencia.</li>
-            </ul>
+            <details class="noticia_simulacro">
+                <summary>Ver más</summary>
+                <h3>Avisos</h3>
+                <ul>
+                    <li>Estamos a 2 semanas de terminar el año escolar.</li>
+                    <li>Se realizó un simulacro de terremoto esta semana.</li>
+                </ul>
+                <h3>Noticias</h3>
+                <ul>
+                    <li>La semana pasada ocurrió el simulacro de terremoto.</li>
+                    <li>El 15 de septiembre se celebró el aniversario de la independencia.</li>
+                </ul>
+                <p>Durante el simulacro, los estudiantes practicaron cómo protegerse ante un terremoto y el personal brindó primeros auxilios.</p>
+                <img class="imagen_simulacro imagen_simulacro--side" src="Instalaciones/Simulacro%20Terremoto%202.jpg" alt="Estudiantes practican cómo protegerse durante un simulacro de terremoto">
+            </details>
         </aside>
         <!-- Contenido principal del sitio, identificado por su encabezado de bienvenida. -->
         <section class="contenido_principal" aria-labelledby="welcome-title">
@@ -121,7 +125,6 @@
                         <li>La semana pasada ocurrió el simulacro de terremoto.</li>
                         <li>El 15 de septiembre se celebró el aniversario de la independencia.</li>
                     </ul>
-                    <img class="imagen_simulacro imagen_simulacro--noticia" src="Instalaciones/Simulacro%20Terremoto.jpg" alt="Personal brinda primeros auxilios durante el simulacro de terremoto">
                 </article>
             </section>
             <!-- Oferta academica: cada articulo describe uno de los bachilleratos disponibles. -->
@@ -131,18 +134,74 @@
                     <article class="tarjeta_contenido">
                         <h3 class="titulo-tarjeta">Bachillerato General</h3>
                         <p class="modalidad-1">Es una modalidad de educación formal. Nuestro plan de estudios forma en nuestros jóvenes una cultura general, que comprende aspectos de las ciencias, humanidades y tecnologías, a partir de la cual se adquieren los elementos fundamentales para la construcción de nuevos aprendizajes. Este diseño proporciona los conocimientos, métodos, técnicas y lenguajes necesarios para ingresar a estudios superiores, desempeñándose de manera eficiente.</p>
+                        <details class="album_bachillerato">
+                            <summary>Ver álbum de imágenes</summary>
+                            <div class="album_bachillerato_imagenes">
+                                <a href="Instalaciones/Instalaciones%201.webp" target="_blank" rel="noopener" aria-label="Abrir foto del jardín del instituto">
+                                    <img src="Instalaciones/Instalaciones%201.webp" alt="Jardín y áreas verdes del instituto">
+                                </a>
+                                <a href="Instalaciones/instalaciones%202.webp" target="_blank" rel="noopener" aria-label="Abrir foto de una actividad cultural">
+                                    <img src="Instalaciones/instalaciones%202.webp" alt="Actividad cultural en las instalaciones del instituto">
+                                </a>
+                                <a href="Instalaciones/Instalaciones%205.webp" target="_blank" rel="noopener" aria-label="Abrir foto de estudiantes en una actividad académica">
+                                    <img src="Instalaciones/Instalaciones%205.webp" alt="Estudiantes durante una actividad académica">
+                                </a>
+                            </div>
+                        </details>
                     </article>
                     <article class="tarjeta_contenido">
                         <h3 class="titulo-tarjeta">Bachillerato Técnico Administrativo Contable</h3>
                         <p class="modalidad-2">El Bachillerato Técnico Vocacional Administrativo Contable, es un técnico de nivel medio donde adquieras conocimientos de los sistemas de control interno, Contabilidad, Administración de los distintos sectores que conforman la economía, producto de exportación y desarrollo de actividades de su profesión que le permitan desempeñarse en forma autónoma. Podrás desempeñarte en los siguientes ámbitos: Ventas, administración, contabilidad, caja, planillas, inventarios, call center, publicidad, control de bodegas, entre otras.</p>
+                        <details class="album_bachillerato">
+                            <summary>Ver álbum de imágenes</summary>
+                            <div class="album_bachillerato_imagenes">
+                                <a href="Instalaciones/Instalaciones%201.webp" target="_blank" rel="noopener" aria-label="Abrir foto del jardín del instituto">
+                                    <img src="Instalaciones/Instalaciones%201.webp" alt="Jardín y áreas verdes del instituto">
+                                </a>
+                                <a href="Instalaciones/instalaciones%202.webp" target="_blank" rel="noopener" aria-label="Abrir foto de una actividad cultural">
+                                    <img src="Instalaciones/instalaciones%202.webp" alt="Actividad cultural en las instalaciones del instituto">
+                                </a>
+                                <a href="Instalaciones/Instalaciones%205.webp" target="_blank" rel="noopener" aria-label="Abrir foto de estudiantes en una actividad académica">
+                                    <img src="Instalaciones/Instalaciones%205.webp" alt="Estudiantes durante una actividad académica">
+                                </a>
+                            </div>
+                        </details>
                     </article>
                     <article class="tarjeta_contenido">
                         <h3 class="titulo-tarjeta">Técnico en Desarrollo de Software</h3>
                         <p class="modalidad-3">En el Bachillerato Desarrollo de Software podrás desenvolverte en los siguientes campos: venta de soluciones de software, soporte para mantenimiento de aplicaciones, capacitación para el desarrollo de software, control de calidad en pruebas de aplicaciones, además podrás desarrollar aplicaciones y páginas web, diseño gráfico, utilización de impresoras 3D y otros.</p>
+                        <details class="album_bachillerato">
+                            <summary>Ver álbum de imágenes</summary>
+                            <div class="album_bachillerato_imagenes">
+                                <a href="Instalaciones/Instalaciones%201.webp" target="_blank" rel="noopener" aria-label="Abrir foto del jardín del instituto">
+                                    <img src="Instalaciones/Instalaciones%201.webp" alt="Jardín y áreas verdes del instituto">
+                                </a>
+                                <a href="Instalaciones/instalaciones%202.webp" target="_blank" rel="noopener" aria-label="Abrir foto de una actividad cultural">
+                                    <img src="Instalaciones/instalaciones%202.webp" alt="Actividad cultural en las instalaciones del instituto">
+                                </a>
+                                <a href="Instalaciones/Instalaciones%205.webp" target="_blank" rel="noopener" aria-label="Abrir foto de estudiantes en una actividad académica">
+                                    <img src="Instalaciones/Instalaciones%205.webp" alt="Estudiantes durante una actividad académica">
+                                </a>
+                            </div>
+                        </details>
                     </article>
                     <article class="tarjeta_contenido">
                         <h3 class="titulo-tarjeta">Técnico en Productivo Agropecuario</h3>
                         <p class="modalidad-4">Ofrece al estudiante conocimientos del agro en diferentes ámbitos: Cunícola, avícola, porcino, apícola, Ornamentales, preparación de Suelos, manejo de cultivos agroindustriales, almacenamiento, procesamiento y comercialización de cultivos perennes, diseño y ejecución de proyectos, manejo de equipo y maquinaria agroindustrial, frutales, viveros, huertos, procesamiento de alimentos, además se incentiva al uso de la tecnología.</p>
+                        <details class="album_bachillerato">
+                            <summary>Ver álbum de imágenes</summary>
+                            <div class="album_bachillerato_imagenes">
+                                <a href="Instalaciones/Instalaciones%201.webp" target="_blank" rel="noopener" aria-label="Abrir foto del jardín del instituto">
+                                    <img src="Instalaciones/Instalaciones%201.webp" alt="Jardín y áreas verdes del instituto">
+                                </a>
+                                <a href="Instalaciones/instalaciones%202.webp" target="_blank" rel="noopener" aria-label="Abrir foto de una actividad cultural">
+                                    <img src="Instalaciones/instalaciones%202.webp" alt="Actividad cultural en las instalaciones del instituto">
+                                </a>
+                                <a href="Instalaciones/Instalaciones%205.webp" target="_blank" rel="noopener" aria-label="Abrir foto de estudiantes en una actividad académica">
+                                    <img src="Instalaciones/Instalaciones%205.webp" alt="Estudiantes durante una actividad académica">
+                                </a>
+                            </div>
+                        </details>
                     </article>
                 </div>
             </section>
@@ -193,11 +252,23 @@
                 <details class="desplegable_contactos">
                     <summary>Contactos</summary>
                     <div class="menu_contactos">
-                        <ul class="lista_contactos">
-                            <li><strong>Facebook:</strong> <a href="#">INEF</a></li>
-                            <li><strong>WhatsApp:</strong> 7923 3650</li>
-                            <li><strong>Correo electrónico:</strong> info.inef@gmail.com</li>
-                            <li><strong>Dirección:</strong> Final 7a. Av. Norte, Col. Las Flores, Usulután Norte, Distrito El Triunfo.</li>
+                        <ul class="lista_contactos lista_datos_contacto">
+                            <li>
+                                <img class="logo_contacto" src="Logos,Imagenes/Logo%20facebook.png" alt="">
+                                <span><strong>Facebook:</strong> INEF</span>
+                            </li>
+                            <li>
+                                <img class="logo_contacto" src="Logos,Imagenes/Logo%20whatsapp.jpg" alt="">
+                                <span><strong>WhatsApp:</strong> 7923 3650</span>
+                            </li>
+                            <li>
+                                <img class="logo_contacto" src="Logos,Imagenes/Logo%20Email.png" alt="">
+                                <span><strong>Correo electrónico:</strong> info.inef@gmail.com</span>
+                            </li>
+                            <li>
+                                <img class="logo_contacto" src="Logos,Imagenes/Logo%20maps.png" alt="">
+                                <span><strong>Dirección:</strong> Final 7a. Av. Norte, Col. Las Flores, Usulután Norte, Distrito El Triunfo.</span>
+                            </li>
                         </ul>
                     </div>
                 </details>
