@@ -16,7 +16,7 @@
             <span class="Letras-titulo">Instituto Nacional "Ernesto Flores"</span>
         </a>
         <!-- Control para abrir el menu en celulares. -->
-        <input class="checkbox-menu-navegacion" id="menu-toggle" type="checkbox" aria-label="Menú de navegación">
+        <input class="checkbox-menu-navegacion" id="menu-toggle" type="checkbox" aria-label="Abrir o cerrar el menú de navegación" aria-controls="nav-principal">
         <!-- Boton del menu. -->
         <label class="toggle-barra" for="menu-toggle" aria-hidden="true">
             <span></span>
@@ -44,13 +44,13 @@
             <p class="descripcion-noticias-lateral">Avisos y novedades del Instituto Nacional Ernesto Flores.</p>
             <h3>Avisos</h3>
             <ul>
-                <li>Estamos a 2 semanas de terminar el año escolar.</li>
-                <li>Se realizó un simulacro de terremoto esta semana.</li>
+                <li>Información sobre el cierre del año escolar.</li>
+                <li>El instituto realizó un simulacro de terremoto.</li>
             </ul>
             <h3>Noticias</h3>
             <ul>
-                <li>La semana pasada ocurrió el simulacro de terremoto.</li>
-                <li>El 15 de septiembre se celebró el aniversario de la independencia.</li>
+                <li>Estudiantes y personal participaron en un simulacro de terremoto.</li>
+                <li>La independencia de El Salvador se conmemora cada 15 de septiembre.</li>
             </ul>
             <p>Durante el simulacro, los estudiantes practicaron cómo protegerse ante un terremoto y el personal brindó primeros auxilios.</p>
             <img class="imagen-simulacro imagen-simulacro--side" src="Instalaciones/Simulacro Terremoto 2.jpg" alt="Estudiantes practican cómo protegerse durante un simulacro de terremoto">
@@ -84,7 +84,7 @@
                         <div class="slide"><img src="Instalaciones/Simulacro Terremoto.jpg" alt="Personal brinda primeros auxilios durante el simulacro de terremoto"></div>
                     </div>
                     <!-- Puntos para cambiar de foto. -->
-                    <div class="carrusel-navegacion" aria-label="Seleccionar foto">
+                    <div class="carrusel-navegacion" role="group" aria-label="Seleccionar foto">
                         <label for="instalacion-1" class="nav-dot" aria-label="Foto 1"></label>
                         <label for="instalacion-2" class="nav-dot" aria-label="Foto 2"></label>
                         <label for="instalacion-3" class="nav-dot" aria-label="Foto 3"></label>
@@ -96,10 +96,11 @@
                 </div>
             </header>
             <!-- Contenido, avisos y noticias. -->
-            <section class="tarjetas-contenido tarjetas-contenido--tres" aria-label="Contenido institucional y noticias">
+            <section class="tarjetas-contenido tarjetas-contenido--tres" aria-labelledby="resumen-title">
+                <h2 class="visually-hidden" id="resumen-title">Contenido institucional y noticias</h2>
                 <article class="tarjeta-contenido">
                     <h3>Contenido</h3>
-                    <p>Mensaje de la institución.</p>
+                    <p>Conoce los principios que guían nuestro trabajo educativo.</p>
                     <ul>
                         <li>El instituto ofrece una educación integral y de calidad.</li>
                         <li>Se promueve la investigación y el desarrollo de proyectos.</li>
@@ -110,8 +111,8 @@
                     <h3>Avisos</h3>
                     <p>Avisos importantes</p>
                     <ul>
-                        <li>Estamos a 2 semanas de terminar el año escolar.</li>
-                        <li>Se realizó un simulacro de terremoto esta semana.</li>
+                        <li>Información sobre el cierre del año escolar.</li>
+                        <li>El instituto realizó un simulacro de terremoto.</li>
                     </ul>
                    
                 </article>
@@ -119,8 +120,8 @@
                     <h3>Noticias</h3>
                     <p>Últimas noticias del instituto.</p>
                     <ul>
-                        <li>La semana pasada ocurrió el simulacro de terremoto.</li>
-                        <li>El 15 de septiembre se celebró el aniversario de la independencia.</li>
+                        <li>Estudiantes y personal participaron en un simulacro de terremoto.</li>
+                        <li>El 15 de septiembre se conmemora la Independencia de El Salvador.</li>
                     </ul>
                 </article>
             </section>
@@ -130,7 +131,7 @@
                 <div class="tarjetas-contenido tarjetas-contenido--cuatro">
                     <article class="tarjeta-contenido">
                         <h3 class="titulo-tarjeta">Bachillerato General</h3>
-                        <p class="modalidad-1">Es una modalidad de educación formal. Nuestro plan de estudios forma en nuestros jóvenes una cultura general, que comprende aspectos de las ciencias, humanidades y tecnologías, a partir de la cual se adquieren los elementos fundamentales para la construcción de nuevos aprendizajes. Este diseño proporciona los conocimientos, métodos, técnicas y lenguajes necesarios para ingresar a estudios superiores, desempeñándose de manera eficiente.</p>
+                        <p class="modalidad-1">Esta modalidad ofrece una formación amplia en ciencias, humanidades y tecnología. El plan de estudios desarrolla conocimientos, métodos y habilidades que ayudan a construir nuevos aprendizajes y continuar estudios superiores.</p>
                         <details class="album-bachillerato">
                             <summary>Ver álbum de imágenes</summary>
                             <div class="album-bachillerato-imagenes" role="region" aria-label="Fotos de Bachillerato General">
@@ -158,7 +159,7 @@
                     </article>
                     <article class="tarjeta-contenido">
                         <h3 class="titulo-tarjeta">Bachillerato Técnico Administrativo Contable</h3>
-                        <p class="modalidad-2">El Bachillerato Técnico Vocacional Administrativo Contable, es un técnico de nivel medio donde adquieras conocimientos de los sistemas de control interno, Contabilidad, Administración de los distintos sectores que conforman la economía, producto de exportación y desarrollo de actividades de su profesión que le permitan desempeñarse en forma autónoma. Podrás desempeñarte en los siguientes ámbitos: Ventas, administración, contabilidad, caja, planillas, inventarios, call center, publicidad, control de bodegas, entre otras.</p>
+                        <p class="modalidad-2">En el Bachillerato Técnico Vocacional Administrativo Contable aprenderás sobre control interno, contabilidad y administración. Esta formación te prepara para desempeñarte en áreas como ventas, caja, planillas, inventarios, atención telefónica, publicidad y control de bodegas.</p>
                         <details class="album-bachillerato">
                             <summary>Ver álbum de imágenes</summary>
                             <div class="album-bachillerato-imagenes" role="region" aria-label="Fotos de Bachillerato Técnico Administrativo Contable">
@@ -186,7 +187,7 @@
                     </article>
                     <article class="tarjeta-contenido">
                         <h3 class="titulo-tarjeta">Técnico en Desarrollo de Software</h3>
-                        <p class="modalidad-3">En el Bachillerato Desarrollo de Software podrás desenvolverte en los siguientes campos: venta de soluciones de software, soporte para mantenimiento de aplicaciones, capacitación para el desarrollo de software, control de calidad en pruebas de aplicaciones, además podrás desarrollar aplicaciones y páginas web, diseño gráfico, utilización de impresoras 3D y otros.</p>
+                        <p class="modalidad-3">En el Bachillerato en Desarrollo de Software podrás aprender a crear aplicaciones y páginas web, brindar soporte y mantenimiento, probar programas y diseñar recursos gráficos. También conocerás herramientas como las impresoras 3D.</p>
                         <details class="album-bachillerato">
                             <summary>Ver álbum de imágenes</summary>
                             <div class="album-bachillerato-imagenes" role="region" aria-label="Fotos de Técnico en Desarrollo de Software">
@@ -214,7 +215,7 @@
                     </article>
                     <article class="tarjeta-contenido">
                         <h3 class="titulo-tarjeta">Técnico en Productivo Agropecuario</h3>
-                        <p class="modalidad-4">Ofrece al estudiante conocimientos del agro en diferentes ámbitos: Cunícola, avícola, porcino, apícola, Ornamentales, preparación de Suelos, manejo de cultivos agroindustriales, almacenamiento, procesamiento y comercialización de cultivos perennes, diseño y ejecución de proyectos, manejo de equipo y maquinaria agroindustrial, frutales, viveros, huertos, procesamiento de alimentos, además se incentiva al uso de la tecnología.</p>
+                        <p class="modalidad-4">Esta formación abarca la producción cunícola, avícola, porcina y apícola; el cultivo de plantas ornamentales y agroindustriales; y el manejo de frutales, viveros y huertos. También incluye la preparación de suelos, el uso de maquinaria, el procesamiento de alimentos y el desarrollo de proyectos.</p>
                         <details class="album-bachillerato">
                             <summary>Ver álbum de imágenes</summary>
                             <div class="album-bachillerato-imagenes" role="region" aria-label="Fotos de Técnico en Productivo Agropecuario">
@@ -248,11 +249,11 @@
                 <div class="tarjetas-contenido tarjetas-contenido--cuatro">
                     <article class="tarjeta-contenido">
                         <h3>Misión</h3>
-                        <p>Somos un centro educativo líder en la investigación, profesionalización y ejecución de proyectos, basado en la planificación por competencias, para mejorar su entorno ambiental, calidad, capacidad crítica y reflexiva, y transformar la sociedad, logrando una excelencia académica, calidad humana y la preparación para la vida.</p>
+                        <p>Ser un centro educativo referente en investigación, formación profesional y desarrollo de proyectos. Trabajamos con una planificación por competencias para fortalecer el pensamiento crítico, cuidar el entorno y contribuir a una sociedad mejor, con excelencia académica, calidad humana y preparación para la vida.</p>
                     </article>
                     <article class="tarjeta-contenido">
                         <h3>Visión</h3>
-                        <p>Ser un centro educativo líder en la organización, ambiente agradable, con tecnología innovadora, alto rendimiento académico, excelente actitud disciplinaria y competente en la investigación, profesionalización y ejecución de proyectos funcionales.</p>
+                        <p>Ser un centro educativo organizado y acogedor, con tecnología innovadora y alto rendimiento académico. Aspiramos a formar una comunidad responsable y comprometida con la investigación, la formación profesional y el desarrollo de proyectos.</p>
                     </article>
                     <article class="tarjeta-contenido" id="valores">
                         <h3>Valores</h3>
@@ -271,8 +272,8 @@
                         <ul>
                             <li>Inicio de clases: 1 de febrero</li>
                             <li>Celebración de la independencia: 15 de septiembre</li>
-                            <li>Celebración del día de las madres: 10 de mayo</li>
-                            <li>Evento miss independencia: 10 de septiembre</li>
+                            <li>Celebración del Día de las Madres: 10 de mayo</li>
+                            <li>Certamen Miss Independencia: 10 de septiembre</li>
                             <li>Fin de clases: 13 de noviembre</li>
                             <li>Entrega de boletines: 20 de noviembre</li>
                         </ul>
@@ -346,7 +347,7 @@
                 <details class="desplegable-contactos">
                     <summary>Sobre nosotros</summary>
                     <div class="menu-contactos">
-                        <p class="lista-contactos">El Instituto Nacional Ernesto Flores, ubicado en El Triunfo, Usulután, ofrece bachilleratos generales y técnicos. Trabajamos para brindar una educación integral y de calidad, y promover el desarrollo académico y humano de nuestra comunidad estudiantil.</p>
+                        <p class="lista-contactos">Ubicado en El Triunfo, Usulután, el Instituto Nacional Ernesto Flores ofrece bachilleratos generales y técnicos. Trabajamos para brindar una educación integral y de calidad, y apoyar el desarrollo académico y humano de nuestra comunidad estudiantil.</p>
                     </div>
                 </details>
             </div>
