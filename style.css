@@ -169,6 +169,7 @@ h2 {
     background: #ffffff;
     border-radius: 0 0 12px 12px;
     box-shadow: 0 10px 18px rgb(14 24 18 / 10%);
+    text-align: center;
 }
 
 .titulo-lateral {
@@ -193,6 +194,7 @@ h2 {
     margin: 0;
     padding: 0;
     list-style: none;
+    text-align: center;
 }
 
 .noticia-simulacro {
@@ -316,26 +318,6 @@ h2 {
     transform: translateY(-4px);
     box-shadow: 0 18px 28px rgb(19 30 43 / 18%), 0 8px 18px rgb(43 76 140 / 16%);
     border-color: rgb(43 76 140 / 22%);
-}
-
-/* Colores de las primeras tarjetas. */
-.tarjeta-contenido:nth-child(1) {
-    background: linear-gradient(180deg, rgb(239 247 255 / 98%), rgb(255 255 255 / 96%));
-}
-
-.tarjeta-contenido:nth-child(2) {
-    border-top-color: #4d8c52;
-    background: linear-gradient(180deg, rgb(240 255 243 / 98%), rgb(255 255 255 / 96%));
-}
-
-.tarjeta-contenido:nth-child(3) {
-    border-top-color: #b94b52;
-    background: linear-gradient(180deg, rgb(255 242 240 / 98%), rgb(255 255 255 / 96%));
-}
-
-.tarjeta-contenido:nth-child(4) {
-    border-top-color: #d2a449;
-    background: linear-gradient(180deg, rgb(255 249 231 / 98%), rgb(255 255 255 / 96%));
 }
 
 /* Texto de las tarjetas. */
@@ -1275,23 +1257,9 @@ body {
     min-height: 260px;
     padding: 1.6rem 1.5rem 1.7rem;
     border-top-width: 7px;
+    border-top-color: #c7d7ed;
     border-radius: 12px;
-}
-
-.tarjeta-contenido:nth-child(1) {
-    background: #e2f0e8;
-}
-
-.tarjeta-contenido:nth-child(2) {
-    background: #fff1c9;
-}
-
-.tarjeta-contenido:nth-child(3) {
-    background: #fbe4de;
-}
-
-.tarjeta-contenido:nth-child(4) {
-    background: #e3edf8;
+    background: linear-gradient(180deg, #ffffff 0%, #edf5ff 100%);
 }
 
 .tarjeta-contenido h3 {
