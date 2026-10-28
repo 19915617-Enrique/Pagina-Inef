@@ -131,6 +131,30 @@
                         <label for="instalacion-1" class="nav-dot" aria-label="Foto 1"></label>
                         <label for="instalacion-2" class="nav-dot" aria-label="Foto 2"></label>
                         <label for="instalacion-3" class="nav-dot" aria-label="Foto 3"></label>
+                        <label for="instalacion-4" class="nav-dot" aria-label="Foto 4"></label>
+                        <label for="instalacion-5" class="nav-dot" aria-label="Foto 5"></label>
+                        <label for="instalacion-6" class="nav-dot" aria-label="Foto 6"></label>
+                        <label for="instalacion-7" class="nav-dot" aria-label="Foto 7"></label>
+                        <label for="instalacion-8" class="nav-dot" aria-label="Foto 8"></label>
+                        <label for="instalacion-9" class="nav-dot" aria-label="Foto 9"></label>
+                        <label for="instalacion-10" class="nav-dot" aria-label="Foto 10"></label>
+                        <label for="instalacion-11" class="nav-dot" aria-label="Foto 11"></label>
+                        <label for="instalacion-12" class="nav-dot" aria-label="Foto 12"></label>
+                        <label for="instalacion-13" class="nav-dot" aria-label="Foto 13"></label>
+                        <label for="instalacion-14" class="nav-dot" aria-label="Foto 14"></label>
+                        <label for="instalacion-15" class="nav-dot" aria-label="Foto 15"></label>
+                        <label for="instalacion-16" class="nav-dot" aria-label="Foto 16"></label>
+                        <label for="instalacion-17" class="nav-dot" aria-label="Foto 17"></label>
+                        <label for="instalacion-18" class="nav-dot" aria-label="Foto 18"></label>
+                        <label for="instalacion-19" class="nav-dot" aria-label="Foto 19"></label>
+                        <label for="instalacion-20" class="nav-dot" aria-label="Foto 20"></label>
+                        <label for="instalacion-21" class="nav-dot" aria-label="Foto 21"></label>
+                        <label for="instalacion-22" class="nav-dot" aria-label="Foto 22"></label>
+                        <label for="instalacion-23" class="nav-dot" aria-label="Foto 23"></label>
+                        <label for="instalacion-24" class="nav-dot" aria-label="Foto 24"></label>
+                        <label for="instalacion-25" class="nav-dot" aria-label="Foto 25"></label>
+                        <label for="instalacion-26" class="nav-dot" aria-label="Foto 26"></label>
+                        <label for="instalacion-27" class="nav-dot" aria-label="Foto 27"></label>
                     </div>
                 </div>
             </header>
@@ -437,33 +461,5 @@
             <p>Derechos de autor © Luis Enrique Carranza | Victor Enmanuel Ventura</p>
         </div>
     </footer>
-    <script>
-        const carousel = document.querySelector(".carrusel-container");
-        const carouselRadios = [...carousel.querySelectorAll('input[name="carrusel-instalaciones"]')];
-        const carouselIndicators = [...carousel.querySelectorAll(".nav-dot")];
-
-        function updateCarouselIndicators() {
-            const activeIndex = carouselRadios.findIndex((radio) => radio.checked);
-            const firstIndex = Math.max(0, Math.min(activeIndex - 1, carouselRadios.length - carouselIndicators.length));
-
-            carouselIndicators.forEach((indicator, index) => {
-                const photoIndex = firstIndex + index;
-                const radio = carouselRadios[photoIndex];
-
-                indicator.htmlFor = radio.id;
-                indicator.setAttribute("aria-label", `Mostrar foto ${photoIndex + 1}`);
-                indicator.classList.toggle("is-current", photoIndex === activeIndex);
-                indicator.classList.toggle("is-focused", radio.matches(":focus-visible"));
-            });
-        }
-
-        carouselRadios.forEach((radio) => {
-            radio.addEventListener("change", updateCarouselIndicators);
-            radio.addEventListener("focus", updateCarouselIndicators);
-            radio.addEventListener("blur", updateCarouselIndicators);
-        });
-
-        updateCarouselIndicators();
-    </script>
 </body>
 </html>

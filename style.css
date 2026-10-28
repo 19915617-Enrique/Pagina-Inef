@@ -1713,15 +1713,17 @@ h6,
     display: flex;
     justify-content: center;
     gap: 10px;
+    pointer-events: none;
 }
 
 .nav-dot {
-    display: grid;
+    display: none;
     width: 32px;
     height: 32px;
     place-items: center;
     border-radius: 50%;
     cursor: pointer;
+    pointer-events: auto;
 }
 
 .nav-dot::before {
@@ -1738,19 +1740,108 @@ h6,
     background-color: rgb(255 255 255 / 90%);
 }
 
+/* Muestra tres fotos contiguas alrededor de la seleccionada. */
+#instalacion-1:checked ~ .carrusel-navegacion .nav-dot:nth-child(-n+3),
+#instalacion-2:checked ~ .carrusel-navegacion .nav-dot:nth-child(-n+3) {
+    display: grid;
+}
+
+#instalacion-3:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+2):nth-child(-n+4),
+#instalacion-4:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+3):nth-child(-n+5),
+#instalacion-5:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+4):nth-child(-n+6),
+#instalacion-6:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+5):nth-child(-n+7),
+#instalacion-7:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+6):nth-child(-n+8),
+#instalacion-8:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+7):nth-child(-n+9),
+#instalacion-9:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+8):nth-child(-n+10),
+#instalacion-10:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+9):nth-child(-n+11),
+#instalacion-11:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+10):nth-child(-n+12),
+#instalacion-12:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+11):nth-child(-n+13),
+#instalacion-13:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+12):nth-child(-n+14),
+#instalacion-14:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+13):nth-child(-n+15),
+#instalacion-15:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+14):nth-child(-n+16),
+#instalacion-16:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+15):nth-child(-n+17),
+#instalacion-17:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+16):nth-child(-n+18),
+#instalacion-18:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+17):nth-child(-n+19),
+#instalacion-19:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+18):nth-child(-n+20),
+#instalacion-20:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+19):nth-child(-n+21),
+#instalacion-21:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+20):nth-child(-n+22),
+#instalacion-22:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+21):nth-child(-n+23),
+#instalacion-23:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+22):nth-child(-n+24),
+#instalacion-24:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+23):nth-child(-n+25),
+#instalacion-25:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+24):nth-child(-n+26) {
+    display: grid;
+}
+
+#instalacion-26:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+25),
+#instalacion-27:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+25) {
+    display: grid;
+}
+
 /* Resalta la foto seleccionada. */
-.nav-dot.is-current::before {
+#instalacion-1:checked ~ .carrusel-navegacion label[for="instalacion-1"]::before,
+#instalacion-2:checked ~ .carrusel-navegacion label[for="instalacion-2"]::before,
+#instalacion-3:checked ~ .carrusel-navegacion label[for="instalacion-3"]::before,
+#instalacion-4:checked ~ .carrusel-navegacion label[for="instalacion-4"]::before,
+#instalacion-5:checked ~ .carrusel-navegacion label[for="instalacion-5"]::before,
+#instalacion-6:checked ~ .carrusel-navegacion label[for="instalacion-6"]::before,
+#instalacion-7:checked ~ .carrusel-navegacion label[for="instalacion-7"]::before,
+#instalacion-8:checked ~ .carrusel-navegacion label[for="instalacion-8"]::before,
+#instalacion-9:checked ~ .carrusel-navegacion label[for="instalacion-9"]::before,
+#instalacion-10:checked ~ .carrusel-navegacion label[for="instalacion-10"]::before,
+#instalacion-11:checked ~ .carrusel-navegacion label[for="instalacion-11"]::before,
+#instalacion-12:checked ~ .carrusel-navegacion label[for="instalacion-12"]::before,
+#instalacion-13:checked ~ .carrusel-navegacion label[for="instalacion-13"]::before,
+#instalacion-14:checked ~ .carrusel-navegacion label[for="instalacion-14"]::before,
+#instalacion-15:checked ~ .carrusel-navegacion label[for="instalacion-15"]::before,
+#instalacion-16:checked ~ .carrusel-navegacion label[for="instalacion-16"]::before,
+#instalacion-17:checked ~ .carrusel-navegacion label[for="instalacion-17"]::before,
+#instalacion-18:checked ~ .carrusel-navegacion label[for="instalacion-18"]::before,
+#instalacion-19:checked ~ .carrusel-navegacion label[for="instalacion-19"]::before,
+#instalacion-20:checked ~ .carrusel-navegacion label[for="instalacion-20"]::before,
+#instalacion-21:checked ~ .carrusel-navegacion label[for="instalacion-21"]::before,
+#instalacion-22:checked ~ .carrusel-navegacion label[for="instalacion-22"]::before,
+#instalacion-23:checked ~ .carrusel-navegacion label[for="instalacion-23"]::before,
+#instalacion-24:checked ~ .carrusel-navegacion label[for="instalacion-24"]::before,
+#instalacion-25:checked ~ .carrusel-navegacion label[for="instalacion-25"]::before,
+#instalacion-26:checked ~ .carrusel-navegacion label[for="instalacion-26"]::before,
+#instalacion-27:checked ~ .carrusel-navegacion label[for="instalacion-27"]::before {
     background-color: rgb(253 0 0 / 85%);
     transform: scale(1.2);
 }
 
-.nav-dot.is-focused {
+#instalacion-1:focus-visible ~ .carrusel-navegacion label[for="instalacion-1"],
+#instalacion-2:focus-visible ~ .carrusel-navegacion label[for="instalacion-2"],
+#instalacion-3:focus-visible ~ .carrusel-navegacion label[for="instalacion-3"],
+#instalacion-4:focus-visible ~ .carrusel-navegacion label[for="instalacion-4"],
+#instalacion-5:focus-visible ~ .carrusel-navegacion label[for="instalacion-5"],
+#instalacion-6:focus-visible ~ .carrusel-navegacion label[for="instalacion-6"],
+#instalacion-7:focus-visible ~ .carrusel-navegacion label[for="instalacion-7"],
+#instalacion-8:focus-visible ~ .carrusel-navegacion label[for="instalacion-8"],
+#instalacion-9:focus-visible ~ .carrusel-navegacion label[for="instalacion-9"],
+#instalacion-10:focus-visible ~ .carrusel-navegacion label[for="instalacion-10"],
+#instalacion-11:focus-visible ~ .carrusel-navegacion label[for="instalacion-11"],
+#instalacion-12:focus-visible ~ .carrusel-navegacion label[for="instalacion-12"],
+#instalacion-13:focus-visible ~ .carrusel-navegacion label[for="instalacion-13"],
+#instalacion-14:focus-visible ~ .carrusel-navegacion label[for="instalacion-14"],
+#instalacion-15:focus-visible ~ .carrusel-navegacion label[for="instalacion-15"],
+#instalacion-16:focus-visible ~ .carrusel-navegacion label[for="instalacion-16"],
+#instalacion-17:focus-visible ~ .carrusel-navegacion label[for="instalacion-17"],
+#instalacion-18:focus-visible ~ .carrusel-navegacion label[for="instalacion-18"],
+#instalacion-19:focus-visible ~ .carrusel-navegacion label[for="instalacion-19"],
+#instalacion-20:focus-visible ~ .carrusel-navegacion label[for="instalacion-20"],
+#instalacion-21:focus-visible ~ .carrusel-navegacion label[for="instalacion-21"],
+#instalacion-22:focus-visible ~ .carrusel-navegacion label[for="instalacion-22"],
+#instalacion-23:focus-visible ~ .carrusel-navegacion label[for="instalacion-23"],
+#instalacion-24:focus-visible ~ .carrusel-navegacion label[for="instalacion-24"],
+#instalacion-25:focus-visible ~ .carrusel-navegacion label[for="instalacion-25"],
+#instalacion-26:focus-visible ~ .carrusel-navegacion label[for="instalacion-26"],
+#instalacion-27:focus-visible ~ .carrusel-navegacion label[for="instalacion-27"] {
     outline: 2px solid #ffffff;
     outline-offset: 3px;
     box-shadow: 0 0 0 2px #142235;
 }
 
-/* Ajusta el carrusel en pantallas pequenas. */
+/* Ajusta el carrusel en pantallas pequeñas. */
 @media (max-width: 760px) {
     .banner-principal {
         grid-template-columns: minmax(0, 1fr);
