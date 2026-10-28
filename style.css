@@ -488,6 +488,28 @@ h2 {
 #album-agropecuario-3:checked ~ .album-bachillerato-carrusel { transform: translateX(-50%); }
 #album-agropecuario-4:checked ~ .album-bachillerato-carrusel { transform: translateX(-75%); }
 
+#album-software-1:checked ~ .album-bachillerato-carrusel,
+#album-software-2:checked ~ .album-bachillerato-carrusel,
+#album-software-3:checked ~ .album-bachillerato-carrusel,
+#album-software-4:checked ~ .album-bachillerato-carrusel,
+#album-software-5:checked ~ .album-bachillerato-carrusel {
+    width: 500%;
+}
+
+#album-software-1:checked ~ .album-bachillerato-carrusel .album-bachillerato-slide,
+#album-software-2:checked ~ .album-bachillerato-carrusel .album-bachillerato-slide,
+#album-software-3:checked ~ .album-bachillerato-carrusel .album-bachillerato-slide,
+#album-software-4:checked ~ .album-bachillerato-carrusel .album-bachillerato-slide,
+#album-software-5:checked ~ .album-bachillerato-carrusel .album-bachillerato-slide {
+    flex-basis: 20%;
+}
+
+#album-software-1:checked ~ .album-bachillerato-carrusel { transform: translateX(0); }
+#album-software-2:checked ~ .album-bachillerato-carrusel { transform: translateX(-20%); }
+#album-software-3:checked ~ .album-bachillerato-carrusel { transform: translateX(-40%); }
+#album-software-4:checked ~ .album-bachillerato-carrusel { transform: translateX(-60%); }
+#album-software-5:checked ~ .album-bachillerato-carrusel { transform: translateX(-80%); }
+
 .album-bachillerato-navegacion {
     position: absolute;
     right: 0;
@@ -528,6 +550,12 @@ h2 {
     transform: scale(1.2);
 }
 
+#album-software-4:checked ~ .album-bachillerato-navegacion .album-bachillerato-punto:nth-child(4)::before,
+#album-software-5:checked ~ .album-bachillerato-navegacion .album-bachillerato-punto:nth-child(5)::before {
+    background: #fd0000;
+    transform: scale(1.2);
+}
+
 #album-general-1:checked ~ .album-bachillerato-navegacion .album-bachillerato-punto:nth-child(1)::before,
 #album-general-2:checked ~ .album-bachillerato-navegacion .album-bachillerato-punto:nth-child(2)::before {
     background: #fd0000;
@@ -542,6 +570,13 @@ h2 {
 .album-bachillerato-radio:nth-of-type(1):focus-visible ~ .album-bachillerato-navegacion .album-bachillerato-punto:nth-child(1),
 .album-bachillerato-radio:nth-of-type(2):focus-visible ~ .album-bachillerato-navegacion .album-bachillerato-punto:nth-child(2),
 .album-bachillerato-radio:nth-of-type(3):focus-visible ~ .album-bachillerato-navegacion .album-bachillerato-punto:nth-child(3) {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 2px #142235;
+}
+
+#album-software-4:focus-visible ~ .album-bachillerato-navegacion .album-bachillerato-punto:nth-child(4),
+#album-software-5:focus-visible ~ .album-bachillerato-navegacion .album-bachillerato-punto:nth-child(5) {
     outline: 2px solid #ffffff;
     outline-offset: 3px;
     box-shadow: 0 0 0 2px #142235;
@@ -1622,14 +1657,14 @@ h6,
 
 .carrusel-slide {
     display: flex;
-    width: 900%;
+    width: 2700%;
     height: 100%;
     transition: transform 0.5s ease-in-out;
 }
 
 .slide {
-    flex: 0 0 calc(100% / 9);
-    width: calc(100% / 9);
+    flex: 0 0 calc(100% / 27);
+    width: calc(100% / 27);
     height: 100%;
 }
 
@@ -1642,14 +1677,32 @@ h6,
 
 /* Muestra la foto elegida. */
 #instalacion-1:checked ~ .carrusel-slide { transform: translateX(0); }
-#instalacion-2:checked ~ .carrusel-slide { transform: translateX(-11.1111%); }
-#instalacion-3:checked ~ .carrusel-slide { transform: translateX(-22.2222%); }
-#instalacion-4:checked ~ .carrusel-slide { transform: translateX(-33.3333%); }
-#instalacion-5:checked ~ .carrusel-slide { transform: translateX(-44.4444%); }
-#instalacion-6:checked ~ .carrusel-slide { transform: translateX(-55.5556%); }
-#instalacion-7:checked ~ .carrusel-slide { transform: translateX(-66.6667%); }
-#instalacion-8:checked ~ .carrusel-slide { transform: translateX(-77.7778%); }
-#instalacion-9:checked ~ .carrusel-slide { transform: translateX(-88.8889%); }
+#instalacion-2:checked ~ .carrusel-slide { transform: translateX(-3.7037%); }
+#instalacion-3:checked ~ .carrusel-slide { transform: translateX(-7.4074%); }
+#instalacion-4:checked ~ .carrusel-slide { transform: translateX(-11.1111%); }
+#instalacion-5:checked ~ .carrusel-slide { transform: translateX(-14.8148%); }
+#instalacion-6:checked ~ .carrusel-slide { transform: translateX(-18.5185%); }
+#instalacion-7:checked ~ .carrusel-slide { transform: translateX(-22.2222%); }
+#instalacion-8:checked ~ .carrusel-slide { transform: translateX(-25.9259%); }
+#instalacion-9:checked ~ .carrusel-slide { transform: translateX(-29.6296%); }
+#instalacion-10:checked ~ .carrusel-slide { transform: translateX(-33.3333%); }
+#instalacion-11:checked ~ .carrusel-slide { transform: translateX(-37.0370%); }
+#instalacion-12:checked ~ .carrusel-slide { transform: translateX(-40.7407%); }
+#instalacion-13:checked ~ .carrusel-slide { transform: translateX(-44.4444%); }
+#instalacion-14:checked ~ .carrusel-slide { transform: translateX(-48.1481%); }
+#instalacion-15:checked ~ .carrusel-slide { transform: translateX(-51.8519%); }
+#instalacion-16:checked ~ .carrusel-slide { transform: translateX(-55.5556%); }
+#instalacion-17:checked ~ .carrusel-slide { transform: translateX(-59.2593%); }
+#instalacion-18:checked ~ .carrusel-slide { transform: translateX(-62.9630%); }
+#instalacion-19:checked ~ .carrusel-slide { transform: translateX(-66.6667%); }
+#instalacion-20:checked ~ .carrusel-slide { transform: translateX(-70.3704%); }
+#instalacion-21:checked ~ .carrusel-slide { transform: translateX(-74.0741%); }
+#instalacion-22:checked ~ .carrusel-slide { transform: translateX(-77.7778%); }
+#instalacion-23:checked ~ .carrusel-slide { transform: translateX(-81.4815%); }
+#instalacion-24:checked ~ .carrusel-slide { transform: translateX(-85.1852%); }
+#instalacion-25:checked ~ .carrusel-slide { transform: translateX(-88.8889%); }
+#instalacion-26:checked ~ .carrusel-slide { transform: translateX(-92.5926%); }
+#instalacion-27:checked ~ .carrusel-slide { transform: translateX(-96.2963%); }
 
 /* Puntos para cambiar de foto. */
 .carrusel-navegacion {
@@ -1686,28 +1739,12 @@ h6,
 }
 
 /* Resalta la foto seleccionada. */
-#instalacion-1:checked ~ .carrusel-navegacion .nav-dot:nth-child(1)::before,
-#instalacion-2:checked ~ .carrusel-navegacion .nav-dot:nth-child(2)::before,
-#instalacion-3:checked ~ .carrusel-navegacion .nav-dot:nth-child(3)::before,
-#instalacion-4:checked ~ .carrusel-navegacion .nav-dot:nth-child(4)::before,
-#instalacion-5:checked ~ .carrusel-navegacion .nav-dot:nth-child(5)::before,
-#instalacion-6:checked ~ .carrusel-navegacion .nav-dot:nth-child(6)::before,
-#instalacion-7:checked ~ .carrusel-navegacion .nav-dot:nth-child(7)::before,
-#instalacion-8:checked ~ .carrusel-navegacion .nav-dot:nth-child(8)::before,
-#instalacion-9:checked ~ .carrusel-navegacion .nav-dot:nth-child(9)::before {
+.nav-dot.is-current::before {
     background-color: rgb(253 0 0 / 85%);
     transform: scale(1.2);
 }
 
-#instalacion-1:focus-visible ~ .carrusel-navegacion label[for="instalacion-1"],
-#instalacion-2:focus-visible ~ .carrusel-navegacion label[for="instalacion-2"],
-#instalacion-3:focus-visible ~ .carrusel-navegacion label[for="instalacion-3"],
-#instalacion-4:focus-visible ~ .carrusel-navegacion label[for="instalacion-4"],
-#instalacion-5:focus-visible ~ .carrusel-navegacion label[for="instalacion-5"],
-#instalacion-6:focus-visible ~ .carrusel-navegacion label[for="instalacion-6"],
-#instalacion-7:focus-visible ~ .carrusel-navegacion label[for="instalacion-7"],
-#instalacion-8:focus-visible ~ .carrusel-navegacion label[for="instalacion-8"],
-#instalacion-9:focus-visible ~ .carrusel-navegacion label[for="instalacion-9"] {
+.nav-dot.is-focused {
     outline: 2px solid #ffffff;
     outline-offset: 3px;
     box-shadow: 0 0 0 2px #142235;
@@ -1758,15 +1795,6 @@ h6,
     border-radius: 8px;
     object-fit: contain;
     background: #e9f3ec;
-}
-
-.actividad-noticia figcaption {
-    margin-top: 0.35rem;
-    color: #1b4d79;
-    font-size: 0.85rem;
-    font-weight: 700;
-    line-height: 1.4;
-    text-align: center;
 }
 
 .imagen-actividad-calendario {
