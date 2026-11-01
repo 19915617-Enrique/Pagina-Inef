@@ -165,6 +165,8 @@ h2 {
 /* Panel de noticias. */
 .barra-lateral {
     grid-area: side;
+    display: flex;
+    flex-direction: column;
     padding: 1.2rem 1rem;
     background: #ffffff;
     border-radius: 0 0 12px 12px;
@@ -468,6 +470,19 @@ h2 {
 
 #album-general-1:checked ~ .album-bachillerato-carrusel { transform: translateX(0); }
 #album-general-2:checked ~ .album-bachillerato-carrusel { transform: translateX(-50%); }
+
+#album-contable-1:checked ~ .album-bachillerato-carrusel,
+#album-contable-2:checked ~ .album-bachillerato-carrusel {
+    width: 200%;
+}
+
+#album-contable-1:checked ~ .album-bachillerato-carrusel .album-bachillerato-slide,
+#album-contable-2:checked ~ .album-bachillerato-carrusel .album-bachillerato-slide {
+    flex-basis: 50%;
+}
+
+#album-contable-1:checked ~ .album-bachillerato-carrusel { transform: translateX(0); }
+#album-contable-2:checked ~ .album-bachillerato-carrusel { transform: translateX(-50%); }
 
 #album-agropecuario-1:checked ~ .album-bachillerato-carrusel,
 #album-agropecuario-2:checked ~ .album-bachillerato-carrusel,
