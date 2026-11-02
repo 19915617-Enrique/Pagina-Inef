@@ -419,6 +419,47 @@ h2 {
     box-shadow: 0 3px 8px rgb(0 0 0 / 20%);
 }
 
+.album-bachillerato-flechas {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    pointer-events: none;
+}
+
+.album-bachillerato-flecha {
+    position: absolute;
+    top: 50%;
+    display: none;
+    width: 34px;
+    height: 44px;
+    place-items: center;
+    transform: translateY(-50%);
+    border: 0;
+    border-radius: 6px;
+    background: rgb(21 35 50 / 75%);
+    color: #ffffff;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+    pointer-events: auto;
+    user-select: none;
+}
+
+.album-flecha-izquierda {
+    left: 8px;
+}
+
+.album-flecha-derecha {
+    right: 8px;
+}
+
+.album-bachillerato-flecha:hover,
+.album-bachillerato-flecha:focus-visible {
+    background: rgb(21 35 50 / 95%);
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
 .album-bachillerato-radio {
     position: absolute;
     width: 1px;
@@ -471,6 +512,13 @@ h2 {
 #album-general-1:checked ~ .album-bachillerato-carrusel { transform: translateX(0); }
 #album-general-2:checked ~ .album-bachillerato-carrusel { transform: translateX(-50%); }
 
+#album-general-1:checked ~ .album-bachillerato-flechas .flecha-anterior-1,
+#album-general-1:checked ~ .album-bachillerato-flechas .flecha-siguiente-1,
+#album-general-2:checked ~ .album-bachillerato-flechas .flecha-anterior-2,
+#album-general-2:checked ~ .album-bachillerato-flechas .flecha-siguiente-2 {
+    display: grid;
+}
+
 #album-contable-1:checked ~ .album-bachillerato-carrusel,
 #album-contable-2:checked ~ .album-bachillerato-carrusel {
     width: 200%;
@@ -483,6 +531,13 @@ h2 {
 
 #album-contable-1:checked ~ .album-bachillerato-carrusel { transform: translateX(0); }
 #album-contable-2:checked ~ .album-bachillerato-carrusel { transform: translateX(-50%); }
+
+#album-contable-1:checked ~ .album-bachillerato-flechas .flecha-anterior-1,
+#album-contable-1:checked ~ .album-bachillerato-flechas .flecha-siguiente-1,
+#album-contable-2:checked ~ .album-bachillerato-flechas .flecha-anterior-2,
+#album-contable-2:checked ~ .album-bachillerato-flechas .flecha-siguiente-2 {
+    display: grid;
+}
 
 #album-agropecuario-1:checked ~ .album-bachillerato-carrusel,
 #album-agropecuario-2:checked ~ .album-bachillerato-carrusel,
@@ -502,6 +557,17 @@ h2 {
 #album-agropecuario-2:checked ~ .album-bachillerato-carrusel { transform: translateX(-25%); }
 #album-agropecuario-3:checked ~ .album-bachillerato-carrusel { transform: translateX(-50%); }
 #album-agropecuario-4:checked ~ .album-bachillerato-carrusel { transform: translateX(-75%); }
+
+#album-agropecuario-1:checked ~ .album-bachillerato-flechas .flecha-anterior-1,
+#album-agropecuario-1:checked ~ .album-bachillerato-flechas .flecha-siguiente-1,
+#album-agropecuario-2:checked ~ .album-bachillerato-flechas .flecha-anterior-2,
+#album-agropecuario-2:checked ~ .album-bachillerato-flechas .flecha-siguiente-2,
+#album-agropecuario-3:checked ~ .album-bachillerato-flechas .flecha-anterior-3,
+#album-agropecuario-3:checked ~ .album-bachillerato-flechas .flecha-siguiente-3,
+#album-agropecuario-4:checked ~ .album-bachillerato-flechas .flecha-anterior-4,
+#album-agropecuario-4:checked ~ .album-bachillerato-flechas .flecha-siguiente-4 {
+    display: grid;
+}
 
 #album-software-1:checked ~ .album-bachillerato-carrusel,
 #album-software-2:checked ~ .album-bachillerato-carrusel,
@@ -524,6 +590,19 @@ h2 {
 #album-software-3:checked ~ .album-bachillerato-carrusel { transform: translateX(-40%); }
 #album-software-4:checked ~ .album-bachillerato-carrusel { transform: translateX(-60%); }
 #album-software-5:checked ~ .album-bachillerato-carrusel { transform: translateX(-80%); }
+
+#album-software-1:checked ~ .album-bachillerato-flechas .flecha-anterior-1,
+#album-software-1:checked ~ .album-bachillerato-flechas .flecha-siguiente-1,
+#album-software-2:checked ~ .album-bachillerato-flechas .flecha-anterior-2,
+#album-software-2:checked ~ .album-bachillerato-flechas .flecha-siguiente-2,
+#album-software-3:checked ~ .album-bachillerato-flechas .flecha-anterior-3,
+#album-software-3:checked ~ .album-bachillerato-flechas .flecha-siguiente-3,
+#album-software-4:checked ~ .album-bachillerato-flechas .flecha-anterior-4,
+#album-software-4:checked ~ .album-bachillerato-flechas .flecha-siguiente-4,
+#album-software-5:checked ~ .album-bachillerato-flechas .flecha-anterior-5,
+#album-software-5:checked ~ .album-bachillerato-flechas .flecha-siguiente-5 {
+    display: grid;
+}
 
 .album-bachillerato-navegacion {
     position: absolute;
@@ -728,7 +807,8 @@ h2 {
 }
 
 .lista-enlaces {
-    min-width: 180px;
+    min-width: 200px;
+    gap: 0.55rem;
 }
 
 .enlace-con-logo {
@@ -745,13 +825,14 @@ h2 {
 .pie-pagina .enlace-con-logo {
     display: flex;
     align-items: center;
-    gap: 0.55rem;
-    padding: 0.2rem 0;
+    gap: 0.7rem;
+    padding: 0.35rem 0;
+    font-size: 0.95rem;
 }
 
 .logo-enlace {
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
     object-fit: contain;
     border-radius: 6px;
     flex-shrink: 0;
@@ -1672,14 +1753,14 @@ h6,
 
 .carrusel-slide {
     display: flex;
-    width: 2700%;
+    width: 1000%;
     height: 100%;
     transition: transform 0.5s ease-in-out;
 }
 
 .slide {
-    flex: 0 0 calc(100% / 27);
-    width: calc(100% / 27);
+    flex: 0 0 10%;
+    width: 10%;
     height: 100%;
 }
 
@@ -1692,32 +1773,80 @@ h6,
 
 /* Muestra la foto elegida. */
 #instalacion-1:checked ~ .carrusel-slide { transform: translateX(0); }
-#instalacion-2:checked ~ .carrusel-slide { transform: translateX(-3.7037%); }
-#instalacion-3:checked ~ .carrusel-slide { transform: translateX(-7.4074%); }
-#instalacion-4:checked ~ .carrusel-slide { transform: translateX(-11.1111%); }
-#instalacion-5:checked ~ .carrusel-slide { transform: translateX(-14.8148%); }
-#instalacion-6:checked ~ .carrusel-slide { transform: translateX(-18.5185%); }
-#instalacion-7:checked ~ .carrusel-slide { transform: translateX(-22.2222%); }
-#instalacion-8:checked ~ .carrusel-slide { transform: translateX(-25.9259%); }
-#instalacion-9:checked ~ .carrusel-slide { transform: translateX(-29.6296%); }
-#instalacion-10:checked ~ .carrusel-slide { transform: translateX(-33.3333%); }
-#instalacion-11:checked ~ .carrusel-slide { transform: translateX(-37.0370%); }
-#instalacion-12:checked ~ .carrusel-slide { transform: translateX(-40.7407%); }
-#instalacion-13:checked ~ .carrusel-slide { transform: translateX(-44.4444%); }
-#instalacion-14:checked ~ .carrusel-slide { transform: translateX(-48.1481%); }
-#instalacion-15:checked ~ .carrusel-slide { transform: translateX(-51.8519%); }
-#instalacion-16:checked ~ .carrusel-slide { transform: translateX(-55.5556%); }
-#instalacion-17:checked ~ .carrusel-slide { transform: translateX(-59.2593%); }
-#instalacion-18:checked ~ .carrusel-slide { transform: translateX(-62.9630%); }
-#instalacion-19:checked ~ .carrusel-slide { transform: translateX(-66.6667%); }
-#instalacion-20:checked ~ .carrusel-slide { transform: translateX(-70.3704%); }
-#instalacion-21:checked ~ .carrusel-slide { transform: translateX(-74.0741%); }
-#instalacion-22:checked ~ .carrusel-slide { transform: translateX(-77.7778%); }
-#instalacion-23:checked ~ .carrusel-slide { transform: translateX(-81.4815%); }
-#instalacion-24:checked ~ .carrusel-slide { transform: translateX(-85.1852%); }
-#instalacion-25:checked ~ .carrusel-slide { transform: translateX(-88.8889%); }
-#instalacion-26:checked ~ .carrusel-slide { transform: translateX(-92.5926%); }
-#instalacion-27:checked ~ .carrusel-slide { transform: translateX(-96.2963%); }
+#instalacion-2:checked ~ .carrusel-slide { transform: translateX(-10%); }
+#instalacion-3:checked ~ .carrusel-slide { transform: translateX(-20%); }
+#instalacion-4:checked ~ .carrusel-slide { transform: translateX(-30%); }
+#instalacion-5:checked ~ .carrusel-slide { transform: translateX(-40%); }
+#instalacion-6:checked ~ .carrusel-slide { transform: translateX(-50%); }
+#instalacion-7:checked ~ .carrusel-slide { transform: translateX(-60%); }
+#instalacion-8:checked ~ .carrusel-slide { transform: translateX(-70%); }
+#instalacion-9:checked ~ .carrusel-slide { transform: translateX(-80%); }
+#instalacion-10:checked ~ .carrusel-slide { transform: translateX(-90%); }
+
+/* Flechas para avanzar y retroceder en la galeria. */
+.carrusel-flechas {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    pointer-events: none;
+}
+
+.carrusel-flecha {
+    position: absolute;
+    top: 50%;
+    display: none;
+    width: 48px;
+    height: 58px;
+    place-items: center;
+    transform: translateY(-50%);
+    border: 0;
+    border-radius: 8px;
+    background: rgb(21 35 50 / 70%);
+    color: #ffffff;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    pointer-events: auto;
+    user-select: none;
+}
+
+.carrusel-flecha-izquierda {
+    left: 12px;
+}
+
+.carrusel-flecha-derecha {
+    right: 12px;
+}
+
+.carrusel-flecha:hover,
+.carrusel-flecha:focus-visible {
+    background: rgb(21 35 50 / 95%);
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+#instalacion-1:checked ~ .carrusel-flechas .flecha-anterior-1,
+#instalacion-1:checked ~ .carrusel-flechas .flecha-siguiente-1,
+#instalacion-2:checked ~ .carrusel-flechas .flecha-anterior-2,
+#instalacion-2:checked ~ .carrusel-flechas .flecha-siguiente-2,
+#instalacion-3:checked ~ .carrusel-flechas .flecha-anterior-3,
+#instalacion-3:checked ~ .carrusel-flechas .flecha-siguiente-3,
+#instalacion-4:checked ~ .carrusel-flechas .flecha-anterior-4,
+#instalacion-4:checked ~ .carrusel-flechas .flecha-siguiente-4,
+#instalacion-5:checked ~ .carrusel-flechas .flecha-anterior-5,
+#instalacion-5:checked ~ .carrusel-flechas .flecha-siguiente-5,
+#instalacion-6:checked ~ .carrusel-flechas .flecha-anterior-6,
+#instalacion-6:checked ~ .carrusel-flechas .flecha-siguiente-6,
+#instalacion-7:checked ~ .carrusel-flechas .flecha-anterior-7,
+#instalacion-7:checked ~ .carrusel-flechas .flecha-siguiente-7,
+#instalacion-8:checked ~ .carrusel-flechas .flecha-anterior-8,
+#instalacion-8:checked ~ .carrusel-flechas .flecha-siguiente-8,
+#instalacion-9:checked ~ .carrusel-flechas .flecha-anterior-9,
+#instalacion-9:checked ~ .carrusel-flechas .flecha-siguiente-9,
+#instalacion-10:checked ~ .carrusel-flechas .flecha-anterior-10,
+#instalacion-10:checked ~ .carrusel-flechas .flecha-siguiente-10 {
+    display: grid;
+}
 
 /* Puntos para cambiar de foto. */
 .carrusel-navegacion {
@@ -1727,12 +1856,13 @@ h6,
     left: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
     pointer-events: none;
 }
 
 .nav-dot {
-    display: none;
+    display: grid;
     width: 32px;
     height: 32px;
     place-items: center;
@@ -1755,43 +1885,6 @@ h6,
     background-color: rgb(255 255 255 / 90%);
 }
 
-/* Muestra tres fotos contiguas alrededor de la seleccionada. */
-#instalacion-1:checked ~ .carrusel-navegacion .nav-dot:nth-child(-n+3),
-#instalacion-2:checked ~ .carrusel-navegacion .nav-dot:nth-child(-n+3) {
-    display: grid;
-}
-
-#instalacion-3:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+2):nth-child(-n+4),
-#instalacion-4:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+3):nth-child(-n+5),
-#instalacion-5:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+4):nth-child(-n+6),
-#instalacion-6:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+5):nth-child(-n+7),
-#instalacion-7:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+6):nth-child(-n+8),
-#instalacion-8:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+7):nth-child(-n+9),
-#instalacion-9:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+8):nth-child(-n+10),
-#instalacion-10:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+9):nth-child(-n+11),
-#instalacion-11:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+10):nth-child(-n+12),
-#instalacion-12:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+11):nth-child(-n+13),
-#instalacion-13:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+12):nth-child(-n+14),
-#instalacion-14:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+13):nth-child(-n+15),
-#instalacion-15:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+14):nth-child(-n+16),
-#instalacion-16:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+15):nth-child(-n+17),
-#instalacion-17:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+16):nth-child(-n+18),
-#instalacion-18:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+17):nth-child(-n+19),
-#instalacion-19:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+18):nth-child(-n+20),
-#instalacion-20:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+19):nth-child(-n+21),
-#instalacion-21:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+20):nth-child(-n+22),
-#instalacion-22:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+21):nth-child(-n+23),
-#instalacion-23:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+22):nth-child(-n+24),
-#instalacion-24:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+23):nth-child(-n+25),
-#instalacion-25:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+24):nth-child(-n+26) {
-    display: grid;
-}
-
-#instalacion-26:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+25),
-#instalacion-27:checked ~ .carrusel-navegacion .nav-dot:nth-child(n+25) {
-    display: grid;
-}
-
 /* Resalta la foto seleccionada. */
 #instalacion-1:checked ~ .carrusel-navegacion label[for="instalacion-1"]::before,
 #instalacion-2:checked ~ .carrusel-navegacion label[for="instalacion-2"]::before,
@@ -1802,24 +1895,7 @@ h6,
 #instalacion-7:checked ~ .carrusel-navegacion label[for="instalacion-7"]::before,
 #instalacion-8:checked ~ .carrusel-navegacion label[for="instalacion-8"]::before,
 #instalacion-9:checked ~ .carrusel-navegacion label[for="instalacion-9"]::before,
-#instalacion-10:checked ~ .carrusel-navegacion label[for="instalacion-10"]::before,
-#instalacion-11:checked ~ .carrusel-navegacion label[for="instalacion-11"]::before,
-#instalacion-12:checked ~ .carrusel-navegacion label[for="instalacion-12"]::before,
-#instalacion-13:checked ~ .carrusel-navegacion label[for="instalacion-13"]::before,
-#instalacion-14:checked ~ .carrusel-navegacion label[for="instalacion-14"]::before,
-#instalacion-15:checked ~ .carrusel-navegacion label[for="instalacion-15"]::before,
-#instalacion-16:checked ~ .carrusel-navegacion label[for="instalacion-16"]::before,
-#instalacion-17:checked ~ .carrusel-navegacion label[for="instalacion-17"]::before,
-#instalacion-18:checked ~ .carrusel-navegacion label[for="instalacion-18"]::before,
-#instalacion-19:checked ~ .carrusel-navegacion label[for="instalacion-19"]::before,
-#instalacion-20:checked ~ .carrusel-navegacion label[for="instalacion-20"]::before,
-#instalacion-21:checked ~ .carrusel-navegacion label[for="instalacion-21"]::before,
-#instalacion-22:checked ~ .carrusel-navegacion label[for="instalacion-22"]::before,
-#instalacion-23:checked ~ .carrusel-navegacion label[for="instalacion-23"]::before,
-#instalacion-24:checked ~ .carrusel-navegacion label[for="instalacion-24"]::before,
-#instalacion-25:checked ~ .carrusel-navegacion label[for="instalacion-25"]::before,
-#instalacion-26:checked ~ .carrusel-navegacion label[for="instalacion-26"]::before,
-#instalacion-27:checked ~ .carrusel-navegacion label[for="instalacion-27"]::before {
+#instalacion-10:checked ~ .carrusel-navegacion label[for="instalacion-10"]::before {
     background-color: rgb(253 0 0 / 85%);
     transform: scale(1.2);
 }
@@ -1833,24 +1909,7 @@ h6,
 #instalacion-7:focus-visible ~ .carrusel-navegacion label[for="instalacion-7"],
 #instalacion-8:focus-visible ~ .carrusel-navegacion label[for="instalacion-8"],
 #instalacion-9:focus-visible ~ .carrusel-navegacion label[for="instalacion-9"],
-#instalacion-10:focus-visible ~ .carrusel-navegacion label[for="instalacion-10"],
-#instalacion-11:focus-visible ~ .carrusel-navegacion label[for="instalacion-11"],
-#instalacion-12:focus-visible ~ .carrusel-navegacion label[for="instalacion-12"],
-#instalacion-13:focus-visible ~ .carrusel-navegacion label[for="instalacion-13"],
-#instalacion-14:focus-visible ~ .carrusel-navegacion label[for="instalacion-14"],
-#instalacion-15:focus-visible ~ .carrusel-navegacion label[for="instalacion-15"],
-#instalacion-16:focus-visible ~ .carrusel-navegacion label[for="instalacion-16"],
-#instalacion-17:focus-visible ~ .carrusel-navegacion label[for="instalacion-17"],
-#instalacion-18:focus-visible ~ .carrusel-navegacion label[for="instalacion-18"],
-#instalacion-19:focus-visible ~ .carrusel-navegacion label[for="instalacion-19"],
-#instalacion-20:focus-visible ~ .carrusel-navegacion label[for="instalacion-20"],
-#instalacion-21:focus-visible ~ .carrusel-navegacion label[for="instalacion-21"],
-#instalacion-22:focus-visible ~ .carrusel-navegacion label[for="instalacion-22"],
-#instalacion-23:focus-visible ~ .carrusel-navegacion label[for="instalacion-23"],
-#instalacion-24:focus-visible ~ .carrusel-navegacion label[for="instalacion-24"],
-#instalacion-25:focus-visible ~ .carrusel-navegacion label[for="instalacion-25"],
-#instalacion-26:focus-visible ~ .carrusel-navegacion label[for="instalacion-26"],
-#instalacion-27:focus-visible ~ .carrusel-navegacion label[for="instalacion-27"] {
+#instalacion-10:focus-visible ~ .carrusel-navegacion label[for="instalacion-10"] {
     outline: 2px solid #ffffff;
     outline-offset: 3px;
     box-shadow: 0 0 0 2px #142235;
