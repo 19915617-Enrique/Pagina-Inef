@@ -16,9 +16,9 @@
             <span class="Letras-titulo">Instituto Nacional "Ernesto Flores"</span>
         </a>
         <!-- Control para abrir el menu en celulares. -->
-        <input class="checkbox-menu-navegacion" id="menu-toggle" type="checkbox" aria-label="Abrir o cerrar el menú de navegación" aria-controls="nav-principal">
+        <input class="casilla-menu-navegacion" id="menu-toggle" type="checkbox" aria-label="Abrir o cerrar el menú de navegación" aria-controls="nav-principal">
         <!-- Boton del menu. -->
-        <label class="toggle-barra" for="menu-toggle" aria-hidden="true">
+        <label class="interruptor-barra" for="menu-toggle" aria-hidden="true">
             <span></span>
             <span></span>
             <span></span>
@@ -56,7 +56,7 @@
                 <img src="Instalaciones/Actividades 1.jpeg" alt="Estudiantes jugando ajedrez en el instituto">
             </figure>
             <p class="actividad-noticia-descripcion">Estudiantes en simulacro de terremoto</p>
-            <img class="imagen-simulacro imagen-simulacro--side" src="Instalaciones/Simulacro Terremoto 2.jpg" alt="Estudiantes practican cómo protegerse durante un simulacro de terremoto">
+            <img class="imagen-simulacro imagen-simulacro--lateral" src="Instalaciones/Simulacro Terremoto 2.jpg" alt="Estudiantes practican cómo protegerse durante un simulacro de terremoto">
         </aside>
         <!-- Contenido principal. -->
         <section class="contenido-principal" aria-labelledby="welcome-title">
@@ -67,7 +67,7 @@
                     <h1 id="welcome-title">Album De Nuestra Institucion</h1>
                 </div>
                 <!-- Carrusel de fotos. -->
-                <div class="carrusel-container" role="region" aria-label="Galería de las instalaciones del instituto">
+                <div class="carrusel-contenedor" role="region" aria-label="Galería de las instalaciones del instituto">
                     <!-- Opciones para elegir una foto. -->
                     <input type="radio" name="carrusel-instalaciones" id="instalacion-1" aria-label="Mostrar foto 1" checked>
                     <input type="radio" name="carrusel-instalaciones" id="instalacion-2" aria-label="Mostrar foto 2">
@@ -102,36 +102,36 @@
                         <label class="carrusel-flecha carrusel-flecha-derecha flecha-siguiente-10" for="instalacion-1" aria-label="Foto siguiente">&gt;</label>
                     </div>
                     <!-- Imagenes del carrusel. -->
-                    <div class="carrusel-slide">
-                        <div class="slide"><img src="Instalaciones/Instalaciones 1.webp" alt="Jardín y áreas verdes del instituto"></div>
-                        <div class="slide"><img src="Instalaciones/instalaciones 2.webp" alt="Actividad cultural en las instalaciones del instituto"></div>
-                        <div class="slide"><img src="Instalaciones/Simulacro Terremoto 2.jpg" alt="Estudiantes practican cómo protegerse durante un simulacro de terremoto"></div>
-                        <div class="slide"><img src="Instalaciones/Actividades 1.jpeg" alt="Estudiantes juegan ajedrez durante una actividad escolar"></div>
-                        <div class="slide"><img src="Instalaciones/Actividades 2.jpeg" alt="Equipo estudiantil participa en una actividad deportiva"></div>
-                        <div class="slide"><img src="Instalaciones/Actividades 4.jpeg" alt="Reina de las fiestas de Independencia durante el desfile"></div>
-                        <div class="slide"><img src="Instalaciones/Foto agro 1.jpeg" alt="Estudiantes realizan prácticas de producción porcina"></div>
-                        <div class="slide"><img src="Instalaciones/Foto General 1.jpeg" alt="Estudiantes trabajan en el aula de Bachillerato General"></div>
-                        <div class="slide"><img src="Instalaciones/Foto contable.jpg" alt="Estudiantes del bachillerato contable trabajan con computadoras"></div>
-                        <div class="slide"><img src="Instalaciones/Foto Software 1.jpeg" alt="Estudiantes presentan un proyecto de software"></div>
+                    <div class="carrusel-diapositiva">
+                        <div class="diapositiva"><img src="Instalaciones/Instalaciones 1.webp" alt="Jardín y áreas verdes del instituto"></div>
+                        <div class="diapositiva"><img src="Instalaciones/instalaciones 2.webp" alt="Actividad cultural en las instalaciones del instituto"></div>
+                        <div class="diapositiva"><img src="Instalaciones/Simulacro Terremoto 2.jpg" alt="Estudiantes practican cómo protegerse durante un simulacro de terremoto"></div>
+                        <div class="diapositiva"><img src="Instalaciones/Actividades 1.jpeg" alt="Estudiantes juegan ajedrez durante una actividad escolar"></div>
+                        <div class="diapositiva"><img src="Instalaciones/Actividades 2.jpeg" alt="Equipo estudiantil participa en una actividad deportiva"></div>
+                        <div class="diapositiva"><img src="Instalaciones/Actividades 4.jpeg" alt="Reina de las fiestas de Independencia durante el desfile"></div>
+                        <div class="diapositiva"><img src="Instalaciones/Foto agro 1.jpeg" alt="Estudiantes realizan prácticas de producción porcina"></div>
+                        <div class="diapositiva"><img src="Instalaciones/Foto General 1.jpeg" alt="Estudiantes trabajan en el aula de Bachillerato General"></div>
+                        <div class="diapositiva"><img src="Instalaciones/Foto contable.jpg" alt="Estudiantes del bachillerato contable trabajan con computadoras"></div>
+                        <div class="diapositiva"><img src="Instalaciones/Foto Software 1.jpeg" alt="Estudiantes presentan un proyecto de software"></div>
                     </div>
                     <!-- Puntos para cambiar de foto. -->
                     <div class="carrusel-navegacion" role="group" aria-label="Seleccionar foto">
-                        <label for="instalacion-1" class="nav-dot" aria-label="Foto 1"></label>
-                        <label for="instalacion-2" class="nav-dot" aria-label="Foto 2"></label>
-                        <label for="instalacion-3" class="nav-dot" aria-label="Foto 3"></label>
-                        <label for="instalacion-4" class="nav-dot" aria-label="Foto 4"></label>
-                        <label for="instalacion-5" class="nav-dot" aria-label="Foto 5"></label>
-                        <label for="instalacion-6" class="nav-dot" aria-label="Foto 6"></label>
-                        <label for="instalacion-7" class="nav-dot" aria-label="Foto 7"></label>
-                        <label for="instalacion-8" class="nav-dot" aria-label="Foto 8"></label>
-                        <label for="instalacion-9" class="nav-dot" aria-label="Foto 9"></label>
-                        <label for="instalacion-10" class="nav-dot" aria-label="Foto 10"></label>
+                        <label for="instalacion-1" class="punto-navegacion" aria-label="Foto 1"></label>
+                        <label for="instalacion-2" class="punto-navegacion" aria-label="Foto 2"></label>
+                        <label for="instalacion-3" class="punto-navegacion" aria-label="Foto 3"></label>
+                        <label for="instalacion-4" class="punto-navegacion" aria-label="Foto 4"></label>
+                        <label for="instalacion-5" class="punto-navegacion" aria-label="Foto 5"></label>
+                        <label for="instalacion-6" class="punto-navegacion" aria-label="Foto 6"></label>
+                        <label for="instalacion-7" class="punto-navegacion" aria-label="Foto 7"></label>
+                        <label for="instalacion-8" class="punto-navegacion" aria-label="Foto 8"></label>
+                        <label for="instalacion-9" class="punto-navegacion" aria-label="Foto 9"></label>
+                        <label for="instalacion-10" class="punto-navegacion" aria-label="Foto 10"></label>
                     </div>
                 </div>
             </header>
             <!-- Contenido, avisos y noticias. -->
             <section class="tarjetas-contenido tarjetas-contenido--tres" aria-labelledby="resumen-title">
-                <h2 class="visually-hidden" id="resumen-title">Contenido institucional y noticias</h2>
+                <h2 class="solo-lectores-pantalla" id="resumen-title">Contenido institucional y noticias</h2>
                 <article class="tarjeta-contenido">
                     <h3>Contenido</h3>
                     <p>Conoce los principios que guían nuestro trabajo educativo.</p>
@@ -179,10 +179,10 @@
                                     <label class="album-bachillerato-flecha album-flecha-derecha flecha-siguiente-2" for="album-general-1" aria-label="Foto siguiente">&gt;</label>
                                 </div>
                                 <div class="album-bachillerato-carrusel">
-                                    <div class="album-bachillerato-slide">
+                                    <div class="album-bachillerato-diapositiva">
                                         <img src="Instalaciones/Foto General 1.jpeg" alt="Estudiantes de Bachillerato General en clase">
                                     </div>
-                                    <div class="album-bachillerato-slide">
+                                    <div class="album-bachillerato-diapositiva">
                                         <img src="Instalaciones/Foto General 2.jpeg" alt="Estudiantes de Bachillerato General durante una actividad académica">
                                     </div>
                                 </div>
@@ -209,10 +209,10 @@
                                     <label class="album-bachillerato-flecha album-flecha-derecha flecha-siguiente-2" for="album-contable-1" aria-label="Foto siguiente">&gt;</label>
                                 </div>
                                 <div class="album-bachillerato-carrusel">
-                                    <div class="album-bachillerato-slide">
+                                    <div class="album-bachillerato-diapositiva">
                                         <img src="Instalaciones/Foto contable.jpg" alt="Estudiantes del bachillerato contable trabajan con computadoras">
                                     </div>
-                                    <div class="album-bachillerato-slide">
+                                    <div class="album-bachillerato-diapositiva">
                                         <img src="Instalaciones/Foto contable 2.jpg" alt="Estudiantes del bachillerato contable reciben una clase">
                                     </div>
                                 </div>
@@ -248,19 +248,19 @@
                                     <label class="album-bachillerato-flecha album-flecha-derecha flecha-siguiente-5" for="album-software-1" aria-label="Foto siguiente">&gt;</label>
                                 </div>
                                 <div class="album-bachillerato-carrusel">
-                                    <div class="album-bachillerato-slide">
+                                    <div class="album-bachillerato-diapositiva">
                                         <img src="Instalaciones/Foto Software 1.jpeg" alt="Estudiantes de Desarrollo de Software realizan un proyecto">
                                     </div>
-                                    <div class="album-bachillerato-slide">
+                                    <div class="album-bachillerato-diapositiva">
                                         <img src="Instalaciones/Foto Software 2.jpeg" alt="Estudiantes presentan un proyecto de software">
                                     </div>
-                                    <div class="album-bachillerato-slide">
+                                    <div class="album-bachillerato-diapositiva">
                                         <img src="Instalaciones/Foto Software 3.jpeg" alt="Estudiantes exponen frente a su clase">
                                     </div>
-                                    <div class="album-bachillerato-slide">
+                                    <div class="album-bachillerato-diapositiva">
                                         <img src="Instalaciones/Foto Software 4.jpeg" alt="Estudiantes de Desarrollo de Software trabajan en una actividad práctica">
                                     </div>
-                                    <div class="album-bachillerato-slide">
+                                    <div class="album-bachillerato-diapositiva">
                                         <img src="Instalaciones/Foto Software 6.jpeg" alt="Estudiantes de Desarrollo de Software participan en una actividad académica">
                                     </div>
                                 </div>
@@ -296,16 +296,16 @@
                                     <label class="album-bachillerato-flecha album-flecha-derecha flecha-siguiente-4" for="album-agropecuario-1" aria-label="Foto siguiente">&gt;</label>
                                 </div>
                                 <div class="album-bachillerato-carrusel">
-                                    <div class="album-bachillerato-slide">
+                                    <div class="album-bachillerato-diapositiva">
                                         <img src="Instalaciones/Foto agro 1.jpeg" alt="Estudiantes de Agropecuario en una granja porcina">
                                     </div>
-                                    <div class="album-bachillerato-slide">
+                                    <div class="album-bachillerato-diapositiva">
                                         <img src="Instalaciones/Foto Agro 2.jpeg" alt="Estudiantes de Agropecuario conocen cultivos en un invernadero">
                                     </div>
-                                    <div class="album-bachillerato-slide">
+                                    <div class="album-bachillerato-diapositiva">
                                         <img src="Instalaciones/Foto Agro 3.jpeg" alt="Práctica de campo de estudiantes de Agropecuario">
                                     </div>
-                                    <div class="album-bachillerato-slide">
+                                    <div class="album-bachillerato-diapositiva">
                                         <img src="Instalaciones/Foto Agro 4.jpeg" alt="Estudiantes participan en una actividad apícola">
                                     </div>
                                 </div>

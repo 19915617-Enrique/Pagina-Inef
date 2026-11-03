@@ -1,23 +1,23 @@
-/* Tipografias del sitio. */
+﻿/* Tipografias del sitio. */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap');
 
 /* Colores y tipografias principales. */
-*{
-    --text-body: #20354b;
-    --text-muted: #2d3747;
-    --text-title: #153d5d;
-    --text-brand: #f3efe8;
-    --text-nav: #f7f9fb;
-    --text-footer: #ffffff;
-    --accent-gold: #d2a449;
-    --accent-blue: #2b4c8c;
-    --accent-green: #4d8c52;
-    --font-primary: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    --font-headings: "Merriweather", Georgia, serif;
-    --font-links: "Montserrat", sans-serif;
+* {
+    --color-texto-cuerpo: #20354b;
+    --color-texto-secundario: #2d3747;
+    --color-texto-titulo: #153d5d;
+    --color-texto-marca: #f3efe8;
+    --color-texto-navegacion: #f7f9fb;
+    --color-texto-pie: #ffffff;
+    --color-acento-dorado: #d2a449;
+    --color-acento-azul: #2b4c8c;
+    --color-acento-verde: #4d8c52;
+    --fuente-principal: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --fuente-titulos: "Merriweather", Georgia, serif;
+    --fuente-enlaces: "Montserrat", sans-serif;
 }
 
-.visually-hidden {
+.solo-lectores-pantalla {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -53,8 +53,8 @@ body {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    color: var(--text-body);
-    font-family: var(--font-primary);
+    color: var(--color-texto-cuerpo);
+    font-family: var(--fuente-principal);
     font-weight: 500;
 }
 
@@ -67,7 +67,7 @@ h2 {
     text-underline-offset: 0.2em;
     text-decoration-color: rgb(43 76 140 / 20%);
     text-align: center;
-    color: var(--text-title);
+    color: var(--color-texto-titulo);
 }
 
 /* Barra superior. */
@@ -86,8 +86,8 @@ h2 {
 
 /* Nombre del instituto en la barra. */
 .Letras-titulo{
-    color: var(--text-brand);
-    font-family: var(--font-headings);
+    color: var(--color-texto-marca);
+    font-family: var(--fuente-titulos);
     font-size: 3rem;
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -282,7 +282,7 @@ h2 {
 /* Titulo de bienvenida. */
 .banner-principal h1 {
     margin: 0;
-    color: var(--text-title);
+    color: var(--color-texto-titulo);
     font-size: clamp(1.3rem, 2vw, 2rem);
     line-height: 1.2;
 }
@@ -325,7 +325,7 @@ h2 {
 /* Texto de las tarjetas. */
 .tarjeta-contenido h3 {
     margin: 0;
-    color: var(--text-title);
+    color: var(--color-texto-titulo);
     font-size: 1.12rem;
     line-height: 1.35;
     text-shadow: 0 1px 0 rgb(255 255 255 / 80%);
@@ -343,7 +343,7 @@ h2 {
 .tarjeta-contenido p,
 .tarjeta-contenido li {
     margin: 0;
-    color: var(--text-muted);
+    color: var(--color-texto-secundario);
     font-size: 0.92rem;
     line-height: 1.6;
     text-align: left;
@@ -474,7 +474,7 @@ h2 {
     transition: transform 0.45s ease-in-out;
 }
 
-.album-bachillerato-slide {
+.album-bachillerato-diapositiva {
     position: relative;
     flex: 0 0 33.3333%;
     height: 100%;
@@ -504,8 +504,8 @@ h2 {
     width: 200%;
 }
 
-#album-general-1:checked ~ .album-bachillerato-carrusel .album-bachillerato-slide,
-#album-general-2:checked ~ .album-bachillerato-carrusel .album-bachillerato-slide {
+#album-general-1:checked ~ .album-bachillerato-carrusel .album-bachillerato-diapositiva,
+#album-general-2:checked ~ .album-bachillerato-carrusel .album-bachillerato-diapositiva {
     flex-basis: 50%;
 }
 
@@ -524,8 +524,8 @@ h2 {
     width: 200%;
 }
 
-#album-contable-1:checked ~ .album-bachillerato-carrusel .album-bachillerato-slide,
-#album-contable-2:checked ~ .album-bachillerato-carrusel .album-bachillerato-slide {
+#album-contable-1:checked ~ .album-bachillerato-carrusel .album-bachillerato-diapositiva,
+#album-contable-2:checked ~ .album-bachillerato-carrusel .album-bachillerato-diapositiva {
     flex-basis: 50%;
 }
 
@@ -546,10 +546,10 @@ h2 {
     width: 400%;
 }
 
-#album-agropecuario-1:checked ~ .album-bachillerato-carrusel .album-bachillerato-slide,
-#album-agropecuario-2:checked ~ .album-bachillerato-carrusel .album-bachillerato-slide,
-#album-agropecuario-3:checked ~ .album-bachillerato-carrusel .album-bachillerato-slide,
-#album-agropecuario-4:checked ~ .album-bachillerato-carrusel .album-bachillerato-slide {
+#album-agropecuario-1:checked ~ .album-bachillerato-carrusel .album-bachillerato-diapositiva,
+#album-agropecuario-2:checked ~ .album-bachillerato-carrusel .album-bachillerato-diapositiva,
+#album-agropecuario-3:checked ~ .album-bachillerato-carrusel .album-bachillerato-diapositiva,
+#album-agropecuario-4:checked ~ .album-bachillerato-carrusel .album-bachillerato-diapositiva {
     flex-basis: 25%;
 }
 
@@ -577,11 +577,11 @@ h2 {
     width: 500%;
 }
 
-#album-software-1:checked ~ .album-bachillerato-carrusel .album-bachillerato-slide,
-#album-software-2:checked ~ .album-bachillerato-carrusel .album-bachillerato-slide,
-#album-software-3:checked ~ .album-bachillerato-carrusel .album-bachillerato-slide,
-#album-software-4:checked ~ .album-bachillerato-carrusel .album-bachillerato-slide,
-#album-software-5:checked ~ .album-bachillerato-carrusel .album-bachillerato-slide {
+#album-software-1:checked ~ .album-bachillerato-carrusel .album-bachillerato-diapositiva,
+#album-software-2:checked ~ .album-bachillerato-carrusel .album-bachillerato-diapositiva,
+#album-software-3:checked ~ .album-bachillerato-carrusel .album-bachillerato-diapositiva,
+#album-software-4:checked ~ .album-bachillerato-carrusel .album-bachillerato-diapositiva,
+#album-software-5:checked ~ .album-bachillerato-carrusel .album-bachillerato-diapositiva {
     flex-basis: 20%;
 }
 
@@ -841,7 +841,7 @@ h2 {
     background: rgba(255, 255, 255, 0.12);
 }
 
-.logo-classroom {
+.logo-aula-google {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -852,7 +852,7 @@ h2 {
     color: #fff;
     font-size: 0.68rem;
     font-weight: 800;
-    font-family: var(--font-headings);
+    font-family: var(--fuente-titulos);
 }
 
 /* Enlaces del pie de pagina. */
@@ -940,7 +940,7 @@ body {
     padding: 0;
     background: #f4f6f2;
     color: #183044;
-    font-family: var(--font-primary);
+    font-family: var(--fuente-principal);
     font-weight: 900;
 }
 
@@ -970,7 +970,7 @@ body {
     border-radius: 0;
     background: transparent;
     color: #153b52;
-    font-family: var(--font-headings);
+    font-family: var(--fuente-titulos);
     font-size: 0.98rem;
     font-weight: 700;
     line-height: 1.2;
@@ -1061,7 +1061,7 @@ body {
 .bienvenida h1 {
     max-width: 700px;
     margin: 0;
-    font-family: var(--font-headings);
+    font-family: var(--fuente-titulos);
     font-size: 3.5rem;
     font-weight: 500;
     line-height: 1.08;
@@ -1102,7 +1102,7 @@ body {
 .programas h2 {
     margin: 0 0 1rem;
     color: #153b52;
-    font-family: var(--font-headings);
+    font-family: var(--fuente-titulos);
     font-size: 2.4rem;
     font-weight: 500;
     line-height: 1.15;
@@ -1134,7 +1134,7 @@ body {
     border-left: 4px solid #18835e;
     background: #ffffff;
     color: #183044;
-    font-family: var(--font-headings);
+    font-family: var(--fuente-titulos);
     font-size: 1.12rem;
     font-weight: 700;
     line-height: 1.4;
@@ -1215,7 +1215,7 @@ body {
 
 .pie-pagina h2 {
     color: #ffffff;
-    font-family: var(--font-headings);
+    font-family: var(--fuente-titulos);
     font-size: 1.05rem;
     font-weight: 500;
 }
@@ -1329,7 +1329,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     color: #1a2430;
-    font-family: var(--font-headings);
+    font-family: var(--fuente-titulos);
 }
 
 .barra-navegacion {
@@ -1438,7 +1438,7 @@ body {
 
 .tarjeta-contenido h3 {
     color: #183b46;
-    font-family: var(--font-headings);
+    font-family: var(--fuente-titulos);
     font-size: 1.4rem;
     line-height: 1.25;
 }
@@ -1467,7 +1467,7 @@ body {
 }
 
 /* Boton del menu en celulares. */
-.toggle-barra {
+.interruptor-barra {
     display: none;
     width: 44px;
     height: 44px;
@@ -1479,7 +1479,7 @@ body {
     cursor: pointer;
 }
 
-.checkbox-menu-navegacion {
+.casilla-menu-navegacion {
     display: none;
 }
 
@@ -1499,7 +1499,7 @@ body {
 }
 
 /* El boton cambia cuando se abre el menu. */
-.toggle-barra span {
+.interruptor-barra span {
     display: block;
     width: 100%;
     height: 2px;
@@ -1507,19 +1507,19 @@ body {
     transition: transform 160ms ease, opacity 160ms ease;
 }
 
-.checkbox-menu-navegacion:checked + .toggle-barra span:first-child {
+.casilla-menu-navegacion:checked + .interruptor-barra span:first-child {
     transform: translateY(6px) rotate(45deg);
 }
 
-.checkbox-menu-navegacion:checked + .toggle-barra span:nth-child(2) {
+.casilla-menu-navegacion:checked + .interruptor-barra span:nth-child(2) {
     opacity: 0;
 }
 
-.checkbox-menu-navegacion:checked + .toggle-barra span:last-child {
+.casilla-menu-navegacion:checked + .interruptor-barra span:last-child {
     transform: translateY(-6px) rotate(-45deg);
 }
 
-.checkbox-menu-navegacion:focus-visible + .toggle-barra {
+.casilla-menu-navegacion:focus-visible + .interruptor-barra {
     outline: 2px solid #ffffff;
     outline-offset: 3px;
 }
@@ -1532,13 +1532,13 @@ body {
         justify-content: space-between;
     }
 
-    .toggle-barra {
+    .interruptor-barra {
         display: grid;
         align-content: center;
         gap: 5px;
     }
 
-    .checkbox-menu-navegacion {
+    .casilla-menu-navegacion {
         display: block;
         position: absolute;
         width: 1px;
@@ -1557,7 +1557,7 @@ body {
         order: 3;
     }
 
-    .checkbox-menu-navegacion:checked ~ .navegacion-barra {
+    .casilla-menu-navegacion:checked ~ .navegacion-barra {
         display: block;
     }
 
@@ -1649,13 +1649,13 @@ body {
 }
 
 /* Menu desplegable en celulares. */
-.toggle-barra {
+.interruptor-barra {
     display: grid;
     align-content: center;
     gap: 5px;
 }
 
-.checkbox-menu-navegacion {
+.casilla-menu-navegacion {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -1679,7 +1679,7 @@ body {
     box-shadow: 0 10px 20px rgb(8 18 30 / 24%);
 }
 
-.checkbox-menu-navegacion:checked ~ .navegacion-barra {
+.casilla-menu-navegacion:checked ~ .navegacion-barra {
     display: block;
 }
 
@@ -1711,7 +1711,7 @@ h6,
 .marca-barra,
 .tarjeta-programa,
 .tarjeta-contenido h3 {
-    font-family: var(--font-headings);
+    font-family: var(--fuente-titulos);
     font-weight: 800;
     text-align: center;
 }
@@ -1732,7 +1732,7 @@ h6,
 }
 
 /* Carrusel de fotos. */
-.carrusel-container {
+.carrusel-contenedor {
     position: relative;
     width: 100%;
     max-width: 960px;
@@ -1744,27 +1744,27 @@ h6,
     box-shadow: 0 4px 10px rgb(0 0 0 / 35%);
 }
 
-.carrusel-container input[type="radio"] {
+.carrusel-contenedor input[type="radio"] {
     position: absolute;
     width: 1px;
     height: 1px;
     opacity: 0;
 }
 
-.carrusel-slide {
+.carrusel-diapositiva {
     display: flex;
     width: 1000%;
     height: 100%;
     transition: transform 0.5s ease-in-out;
 }
 
-.slide {
+.diapositiva {
     flex: 0 0 10%;
     width: 10%;
     height: 100%;
 }
 
-.slide img {
+.diapositiva img {
     display: block;
     width: 100%;
     height: 100%;
@@ -1772,16 +1772,16 @@ h6,
 }
 
 /* Muestra la foto elegida. */
-#instalacion-1:checked ~ .carrusel-slide { transform: translateX(0); }
-#instalacion-2:checked ~ .carrusel-slide { transform: translateX(-10%); }
-#instalacion-3:checked ~ .carrusel-slide { transform: translateX(-20%); }
-#instalacion-4:checked ~ .carrusel-slide { transform: translateX(-30%); }
-#instalacion-5:checked ~ .carrusel-slide { transform: translateX(-40%); }
-#instalacion-6:checked ~ .carrusel-slide { transform: translateX(-50%); }
-#instalacion-7:checked ~ .carrusel-slide { transform: translateX(-60%); }
-#instalacion-8:checked ~ .carrusel-slide { transform: translateX(-70%); }
-#instalacion-9:checked ~ .carrusel-slide { transform: translateX(-80%); }
-#instalacion-10:checked ~ .carrusel-slide { transform: translateX(-90%); }
+#instalacion-1:checked ~ .carrusel-diapositiva { transform: translateX(0); }
+#instalacion-2:checked ~ .carrusel-diapositiva { transform: translateX(-10%); }
+#instalacion-3:checked ~ .carrusel-diapositiva { transform: translateX(-20%); }
+#instalacion-4:checked ~ .carrusel-diapositiva { transform: translateX(-30%); }
+#instalacion-5:checked ~ .carrusel-diapositiva { transform: translateX(-40%); }
+#instalacion-6:checked ~ .carrusel-diapositiva { transform: translateX(-50%); }
+#instalacion-7:checked ~ .carrusel-diapositiva { transform: translateX(-60%); }
+#instalacion-8:checked ~ .carrusel-diapositiva { transform: translateX(-70%); }
+#instalacion-9:checked ~ .carrusel-diapositiva { transform: translateX(-80%); }
+#instalacion-10:checked ~ .carrusel-diapositiva { transform: translateX(-90%); }
 
 /* Flechas para avanzar y retroceder en la galeria. */
 .carrusel-flechas {
@@ -1861,7 +1861,7 @@ h6,
     pointer-events: none;
 }
 
-.nav-dot {
+.punto-navegacion {
     display: grid;
     width: 32px;
     height: 32px;
@@ -1871,7 +1871,7 @@ h6,
     pointer-events: auto;
 }
 
-.nav-dot::before {
+.punto-navegacion::before {
     width: 12px;
     height: 12px;
     border: 1px solid rgb(255 255 255 / 85%);
@@ -1881,7 +1881,7 @@ h6,
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.nav-dot:hover::before {
+.punto-navegacion:hover::before {
     background-color: rgb(255 255 255 / 90%);
 }
 
@@ -1921,7 +1921,7 @@ h6,
         grid-template-columns: minmax(0, 1fr);
     }
 
-    .carrusel-container {
+    .carrusel-contenedor {
         max-width: 560px;
     }
 }
@@ -1933,7 +1933,7 @@ h6,
     object-fit: cover;
 }
 
-.imagen-simulacro--side {
+.imagen-simulacro--lateral {
     aspect-ratio: 4 / 3;
     margin: 0.5rem 0 1rem;
 }
@@ -2000,7 +2000,7 @@ h6,
         overflow-wrap: anywhere;
     }
 
-    .toggle-barra {
+    .interruptor-barra {
         flex: 0 0 36px;
         width: 36px;
         height: 36px;
@@ -2033,7 +2033,7 @@ h6,
         font-size: 0.95rem;
     }
 
-    .toggle-barra {
+    .interruptor-barra {
         flex-basis: 36px;
         width: 36px;
         height: 36px;
@@ -2052,8 +2052,8 @@ summary,
 .desplegable-contactos summary,
 .noticia-simulacro summary,
 .album-bachillerato summary,
-.nav-dot {
-    font-family: var(--font-links);
+.punto-navegacion {
+    font-family: var(--fuente-enlaces);
 }
 
 /* Fuente de los encabezados. */
@@ -2069,7 +2069,7 @@ h6,
 .bienvenida h1,
 .programas h2,
 .titulo-lateral {
-    font-family: var(--font-headings);
+    font-family: var(--fuente-titulos);
     font-weight: 700;
     letter-spacing: 0.02em;
     line-height: 1.2;
@@ -2083,7 +2083,7 @@ li,
 .encabezado-programas > p:last-child,
 .lista-contactos,
 .pie-pagina a {
-    font-family: var(--font-primary);
+    font-family: var(--fuente-principal);
     font-weight: 500;
     line-height: 1.7;
     letter-spacing: 0.01em;
