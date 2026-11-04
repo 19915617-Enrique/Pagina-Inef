@@ -2023,17 +2023,40 @@ h6,
     border-radius: 8px;
 }
 
-@media (min-width: 761px) {
-    .ubicacion-lateral {
-        display: flex;
-        flex: 1 1 auto;
-        flex-direction: column;
-        min-height: 0;
-    }
+.video-celebracion-lateral {
+    margin-top: 1rem;
+}
 
+.video-celebracion-lateral h3 {
+    margin: 0 0 0.6rem;
+    color: #183b46;
+    font-size: 1rem;
+}
+
+.barra-lateral h3.actividad-noticia-descripcion {
+    margin: 0 0 0.6rem;
+    color: #183b46;
+    font-size: 1rem;
+}
+
+.video-facebook-lateral {
+    display: block;
+    width: min(100%, 267px);
+    height: 476px;
+    margin: 0 auto;
+    border: 0;
+    border-radius: 8px;
+}
+
+.video-facebook-lateral--institucion {
+    width: min(100%, 560px);
+    height: auto;
+    aspect-ratio: 560 / 314;
+}
+
+@media (min-width: 761px) {
     .mapa-ubicacion-lateral {
-        flex: 1 1 0;
-        aspect-ratio: auto;
+        height: auto;
     }
 }
 
@@ -2200,6 +2223,6 @@ li,
 
     .Letras-titulo {
         min-width: 0;
-        font-size: clamp(1.05rem, 2vw, 1.75rem);
+        font-size: 3rem;
     }
 }
