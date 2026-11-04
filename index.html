@@ -42,7 +42,7 @@
         <!-- Noticias y avisos. -->
         <aside class="barra-lateral" aria-labelledby="side-news-title">
             <h2 class="titulo-lateral" id="side-news-title">Noticias</h2>
-            <p class="descripcion-noticias-lateral">Ultimas Noticias Sobre Nuestra Institucion:</p>
+            <p class="descripcion-noticias-lateral">Últimas noticias sobre nuestra institución:</p>
             <p class="actividad-noticia-descripcion">Reina de las fiestas de Independencia.</p>
             <figure class="actividad-noticia">
                 <img class="imagen-actividad-calendario" src="Instalaciones/Actividades 4.jpeg" alt="Reina de las fiestas de Independencia durante el desfile">
@@ -57,6 +57,17 @@
             </figure>
             <p class="actividad-noticia-descripcion">Estudiantes en simulacro de terremoto</p>
             <img class="imagen-simulacro imagen-simulacro--lateral" src="Instalaciones/Simulacro Terremoto 2.jpg" alt="Estudiantes practican cómo protegerse durante un simulacro de terremoto">
+            <section class="ubicacion-lateral" aria-labelledby="ubicacion-titulo">
+                <h3 id="ubicacion-titulo">Ubicación de nuestra institución</h3>
+                <iframe
+                    class="mapa-ubicacion-lateral"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1900.8322920832645!2d-88.42772460326559!3d13.560760326684566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f64cb3d84088d53%3A0x354c94438998a42f!2sInstituto%20Nacional%20Ernesto%20Flores%2012524!5e1!3m2!1ses-419!2ssv!4v1793792428650!5m2!1ses-419!2ssv"
+                    title="Ubicación del Instituto Nacional Ernesto Flores en Google Maps"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </section>
         </aside>
         <!-- Contenido principal. -->
         <section class="contenido-principal" aria-labelledby="welcome-title">
@@ -64,7 +75,7 @@
             <header class="banner-principal">
                 <div class="contenido-banner-principal">
                     <p class="etiqueta">El Triunfo · Usulután · INEF </p>
-                    <h1 id="welcome-title">Album De Nuestra Institucion</h1>
+                    <h1 id="welcome-title">Álbum de nuestra institución</h1>
                 </div>
                 <!-- Carrusel de fotos. -->
                 <div class="carrusel-contenedor" role="region" aria-label="Galería de las instalaciones del instituto">
@@ -161,14 +172,16 @@
             </section>
             <!-- Bachilleratos disponibles. -->
             <section class="grupo-programas" id="programas" aria-labelledby="bachilleratos-title">
-                <h2 id="bachilleratos-title">Ofertas Academicas</h2>
+                <h2 id="bachilleratos-title">Ofertas académicas</h2>
                 <div class="tarjetas-contenido tarjetas-contenido--cuatro">
-                    <article class="tarjeta-contenido">
+                    <input class="control-albumes-fila" type="checkbox" id="albumes-fila-general-contable" aria-label="Mostrar u ocultar los álbumes de General y Contable">
+                    <input class="control-albumes-fila" type="checkbox" id="albumes-fila-software-agro" aria-label="Mostrar u ocultar los álbumes de Software y Agropecuario">
+                    <article class="tarjeta-contenido tarjeta-programa-fila-general-contable">
                         <h3 class="titulo-tarjeta">Bachillerato General</h3>
                         <p class="modalidad-1">Esta modalidad ofrece una formación amplia en ciencias, humanidades y tecnología. El plan de estudios desarrolla conocimientos, métodos y habilidades que ayudan a construir nuevos aprendizajes y continuar estudios superiores.</p>
                         <p><strong>Duración:</strong> 2 años.</p>
-                        <details class="album-bachillerato">
-                            <summary>Ver álbum de imágenes</summary>
+                        <label class="album-bachillerato-resumen" for="albumes-fila-general-contable">Ver álbum de imágenes</label>
+                        <div class="album-bachillerato-contenido">
                             <div class="album-bachillerato-imagenes" role="region" aria-label="Fotos de Bachillerato General">
                                 <input class="album-bachillerato-radio" type="radio" name="album-general" id="album-general-1" aria-label="Mostrar foto 1" checked>
                                 <input class="album-bachillerato-radio" type="radio" name="album-general" id="album-general-2" aria-label="Mostrar foto 2">
@@ -191,14 +204,14 @@
                                     <label class="album-bachillerato-punto" for="album-general-2" aria-label="Mostrar foto 2"></label>
                                 </div>
                             </div>
-                        </details>
+                        </div>
                     </article>
-                    <article class="tarjeta-contenido">
+                    <article class="tarjeta-contenido tarjeta-programa-fila-general-contable">
                         <h3 class="titulo-tarjeta">Bachillerato Técnico Administrativo Contable</h3>
                         <p class="modalidad-2">En el Bachillerato Técnico Vocacional Administrativo Contable aprenderás sobre control interno, contabilidad y administración. Esta formación te prepara para desempeñarte en áreas como ventas, caja, planillas, inventarios, atención telefónica, publicidad y control de bodegas.</p>
                         <p><strong>Duración:</strong> 3 años.</p>
-                        <details class="album-bachillerato">
-                            <summary>Ver álbum de imágenes</summary>
+                        <label class="album-bachillerato-resumen" for="albumes-fila-general-contable">Ver álbum de imágenes</label>
+                        <div class="album-bachillerato-contenido">
                             <div class="album-bachillerato-imagenes" role="region" aria-label="Fotos de Bachillerato Técnico Administrativo Contable">
                                 <input class="album-bachillerato-radio" type="radio" name="album-contable" id="album-contable-1" aria-label="Mostrar foto 1" checked>
                                 <input class="album-bachillerato-radio" type="radio" name="album-contable" id="album-contable-2" aria-label="Mostrar foto 2">
@@ -221,14 +234,14 @@
                                     <label class="album-bachillerato-punto" for="album-contable-2" aria-label="Mostrar foto 2"></label>
                                 </div>
                             </div>
-                        </details>
+                        </div>
                     </article>
-                    <article class="tarjeta-contenido">
+                    <article class="tarjeta-contenido tarjeta-programa-fila-software-agro">
                         <h3 class="titulo-tarjeta">Técnico en Desarrollo de Software</h3>
                         <p class="modalidad-3">En el Bachillerato en Desarrollo de Software podrás aprender a crear aplicaciones y páginas web, brindar soporte y mantenimiento, probar programas y diseñar recursos gráficos. También conocerás herramientas como las impresoras 3D.</p>
                         <p><strong>Duración:</strong> 3 años.</p>
-                        <details class="album-bachillerato">
-                            <summary>Ver álbum de imágenes</summary>
+                        <label class="album-bachillerato-resumen" for="albumes-fila-software-agro">Ver álbum de imágenes</label>
+                        <div class="album-bachillerato-contenido">
                             <div class="album-bachillerato-imagenes" role="region" aria-label="Fotos de Técnico en Desarrollo de Software">
                                 <input class="album-bachillerato-radio" type="radio" name="album-software" id="album-software-1" aria-label="Mostrar foto 1" checked>
                                 <input class="album-bachillerato-radio" type="radio" name="album-software" id="album-software-2" aria-label="Mostrar foto 2">
@@ -272,14 +285,14 @@
                                     <label class="album-bachillerato-punto" for="album-software-5" aria-label="Mostrar foto 5"></label>
                                 </div>
                             </div>
-                        </details>
+                        </div>
                     </article>
-                    <article class="tarjeta-contenido">
+                    <article class="tarjeta-contenido tarjeta-programa-fila-software-agro">
                         <h3 class="titulo-tarjeta">Técnico en Productivo Agropecuario</h3>
                         <p class="modalidad-4">Esta formación abarca la producción cunícola, avícola, porcina y apícola; el cultivo de plantas ornamentales y agroindustriales; y el manejo de frutales, viveros y huertos. También incluye la preparación de suelos, el uso de maquinaria, el procesamiento de alimentos y el desarrollo de proyectos.</p>
                         <p><strong>Duración:</strong> 3 años.</p>
-                        <details class="album-bachillerato">
-                            <summary>Ver álbum de imágenes</summary>
+                        <label class="album-bachillerato-resumen" for="albumes-fila-software-agro">Ver álbum de imágenes</label>
+                        <div class="album-bachillerato-contenido">
                             <div class="album-bachillerato-imagenes" role="region" aria-label="Fotos de Técnico en Productivo Agropecuario">
                                 <input class="album-bachillerato-radio" type="radio" name="album-agropecuario" id="album-agropecuario-1" aria-label="Mostrar foto 1" checked>
                                 <input class="album-bachillerato-radio" type="radio" name="album-agropecuario" id="album-agropecuario-2" aria-label="Mostrar foto 2">
@@ -316,7 +329,7 @@
                                     <label class="album-bachillerato-punto" for="album-agropecuario-4" aria-label="Mostrar foto 4"></label>
                                 </div>
                             </div>
-                        </details>
+                        </div>
                     </article>
                 </div>
             </section>
@@ -357,8 +370,10 @@
                     </article>
                     <article class="tarjeta-contenido">
                         <h3>Período de matrícula</h3>
-                        <p>Del 3 de noviembre de 2026 al 31 de enero de 2027.</p>
-                        <p>Para más información, comunícate con el instituto mediante los datos de contacto al pie de esta página.</p>
+                        <ul>
+                            <li><p>Del 3 de noviembre de 2026 al; 31 de enero de 2027.</p></li>
+                            <li><p>Para más información, comunícate con el instituto mediante los datos de contacto al pie de esta página.</p></li>
+                        </ul>
                     </article>
                     <article class="tarjeta-contenido" id="valores">
                         <h3>Valores</h3>

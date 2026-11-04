@@ -133,18 +133,20 @@ h2 {
 /* Enlaces del menu. */
 .enlaces-barra a {
     display: block;
-    padding: 0.55rem 0.2rem;
+    padding: 0.55rem 0.65rem;
+    border-radius: 6px;
     color: #f7f9fb;
     font-size: 0.88rem;
     font-weight: 700;
     letter-spacing: 0.02em;
     text-decoration: none;
-    transition: color 160ms ease;
+    transition: background-color 160ms ease;
 }
 
 .enlaces-barra a:hover,
 .enlaces-barra a:focus-visible {
-    color: #d2a449;
+    color: #f7f9fb;
+    background-color: #d2a449;
 }
 
 .enlaces-barra a:focus-visible {
@@ -391,22 +393,63 @@ h2 {
     text-decoration: underline;
 }
 
-.album-bachillerato {
-    margin-top: auto;
-    padding-top: 0.6rem;
+.tarjetas-contenido--cuatro {
+    position: relative;
 }
 
-.album-bachillerato summary {
+.control-albumes-fila {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.album-bachillerato-resumen {
+    display: block;
+    margin-top: auto;
+    padding-top: 0.6rem;
     color: #2b4c8c;
     font-weight: 700;
     cursor: pointer;
 }
 
-.album-bachillerato summary:hover,
-.album-bachillerato summary:focus-visible {
+.album-bachillerato-resumen::before {
+    margin-right: 0.4rem;
+    content: "▶";
+    font-size: 0.75em;
+}
+
+.album-bachillerato-resumen:hover,
+.album-bachillerato-resumen:focus-visible {
     color: #b94b52;
     text-decoration: underline;
     text-underline-offset: 0.2em;
+}
+
+.album-bachillerato-contenido {
+    display: none;
+    padding-top: 0.6rem;
+}
+
+#albumes-fila-general-contable:checked ~ .tarjeta-programa-fila-general-contable .album-bachillerato-contenido,
+#albumes-fila-software-agro:checked ~ .tarjeta-programa-fila-software-agro .album-bachillerato-contenido {
+    display: block;
+}
+
+#albumes-fila-general-contable:checked ~ .tarjeta-programa-fila-general-contable .album-bachillerato-resumen::before,
+#albumes-fila-software-agro:checked ~ .tarjeta-programa-fila-software-agro .album-bachillerato-resumen::before {
+    content: "▼";
+}
+
+#albumes-fila-general-contable:focus-visible ~ .tarjeta-programa-fila-general-contable .album-bachillerato-resumen,
+#albumes-fila-software-agro:focus-visible ~ .tarjeta-programa-fila-software-agro .album-bachillerato-resumen {
+    outline: 2px solid #2b4c8c;
+    outline-offset: 3px;
 }
 
 .album-bachillerato-imagenes {
@@ -993,16 +1036,18 @@ body {
 }
 
 .enlaces-barra a {
-    padding: 0.6rem 0.1rem;
-    color: #294858;
+    padding: 0.55rem 0.65rem;
+    border-radius: 6px;
+    color: #f7f9fb;
     font-size: 0.82rem;
     letter-spacing: 0;
-    transition: color 160ms ease;
+    transition: background-color 160ms ease;
 }
 
 .enlaces-barra a:hover,
 .enlaces-barra a:focus-visible {
-    color: #18835e;
+    color: #f7f9fb;
+    background-color: #d2a449;
 }
 
 /* Resalta los elementos al recorrer la pagina con el teclado. */
@@ -1354,7 +1399,8 @@ body {
 
 .enlaces-barra a:hover,
 .enlaces-barra a:focus-visible {
-    color: #d2a449;
+    color: #f7f9fb;
+    background-color: #d2a449;
 }
 
 .contenedor-medio {
@@ -1469,12 +1515,11 @@ body {
 /* Boton del menu en celulares. */
 .interruptor-barra {
     display: none;
-    width: 44px;
-    height: 44px;
-    padding: 10px;
-    border: 1px solid rgb(255 255 255 / 35%);
-    border-radius: 4px;
-    background: transparent;
+    width: 36px;
+    height: 36px;
+    padding: 7px;
+    border: 0;
+    background: none;
     color: #ffffff;
     cursor: pointer;
 }
@@ -1498,25 +1543,12 @@ body {
     object-fit: contain;
 }
 
-/* El boton cambia cuando se abre el menu. */
+/* Lineas del boton del menu. */
 .interruptor-barra span {
     display: block;
     width: 100%;
     height: 2px;
     background: currentColor;
-    transition: transform 160ms ease, opacity 160ms ease;
-}
-
-.casilla-menu-navegacion:checked + .interruptor-barra span:first-child {
-    transform: translateY(6px) rotate(45deg);
-}
-
-.casilla-menu-navegacion:checked + .interruptor-barra span:nth-child(2) {
-    opacity: 0;
-}
-
-.casilla-menu-navegacion:checked + .interruptor-barra span:last-child {
-    transform: translateY(-6px) rotate(-45deg);
 }
 
 .casilla-menu-navegacion:focus-visible + .interruptor-barra {
@@ -1656,6 +1688,7 @@ body {
 }
 
 .casilla-menu-navegacion {
+    display: block;
     position: absolute;
     width: 1px;
     height: 1px;
@@ -1971,6 +2004,39 @@ h6,
     object-fit: contain;
 }
 
+.ubicacion-lateral {
+    margin-top: 1rem;
+}
+
+.ubicacion-lateral h3 {
+    margin: 0 0 0.6rem;
+    color: #183b46;
+    font-size: 1rem;
+}
+
+.mapa-ubicacion-lateral {
+    display: block;
+    width: 100%;
+    min-height: 190px;
+    aspect-ratio: 4 / 3;
+    border: 0;
+    border-radius: 8px;
+}
+
+@media (min-width: 761px) {
+    .ubicacion-lateral {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        min-height: 0;
+    }
+
+    .mapa-ubicacion-lateral {
+        flex: 1 1 0;
+        aspect-ratio: auto;
+    }
+}
+
 /* Marca y menu en pantallas pequeñas. */
 @media (max-width: 760px) {
     .barra-navegacion {
@@ -2017,7 +2083,7 @@ h6,
     }
 
     .enlaces-barra a {
-        padding: 0.6rem 0.2rem;
+        padding: 0.6rem 0.65rem;
         font-size: 0.82rem;
     }
 }
@@ -2051,7 +2117,7 @@ a,
 summary,
 .desplegable-contactos summary,
 .noticia-simulacro summary,
-.album-bachillerato summary,
+.album-bachillerato-resumen,
 .punto-navegacion {
     font-family: var(--fuente-enlaces);
 }
@@ -2087,4 +2153,53 @@ li,
     font-weight: 500;
     line-height: 1.7;
     letter-spacing: 0.01em;
+}
+
+/* Conserva los diez controles del carrusel en una sola fila en celulares. */
+@media (max-width: 540px) {
+    .carrusel-navegacion {
+        bottom: 6px;
+        gap: 1px;
+    }
+
+    .punto-navegacion {
+        width: 20px;
+        height: 20px;
+    }
+
+    .punto-navegacion::before {
+        width: 10px;
+        height: 10px;
+    }
+
+    .carrusel-flecha {
+        width: 40px;
+        height: 48px;
+        font-size: 1.6rem;
+    }
+
+    .carrusel-flecha-izquierda {
+        left: 8px;
+    }
+
+    .carrusel-flecha-derecha {
+        right: 8px;
+    }
+}
+
+/* Mantiene el menu hamburguesa disponible tambien en pantallas grandes. */
+@media (min-width: 761px) {
+    .marca-barra {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .marca-barra img {
+        flex: 0 0 54px;
+    }
+
+    .Letras-titulo {
+        min-width: 0;
+        font-size: clamp(1.05rem, 2vw, 1.75rem);
+    }
 }
