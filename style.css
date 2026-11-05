@@ -42,9 +42,9 @@ body {
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto minmax(120vh, auto) auto;
     grid-template-areas:
-        "navbar"
-        "middle"
-        "bottom";
+        "navegacion"
+        "contenido"
+        "pie";
     gap: 15px;
     margin: 0;
     padding: 8px;
@@ -70,9 +70,65 @@ h2 {
     color: var(--color-texto-titulo);
 }
 
+/* Fuente de los encabezados. */
+h1{
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+}
+h3{
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+}
+h4{
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+}
+.nombre-instituto{
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+}
+.marca-barra{
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+}
+.banner-principal h1{
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+}
+.bienvenida h1{
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+}
+.programas h2{
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+}
+.titulo-lateral {
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+}
+
 /* Barra superior. */
 .barra-navegacion {
-    grid-area: navbar;
+    grid-area: navegacion;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -85,7 +141,7 @@ h2 {
 }
 
 /* Nombre del instituto en la barra. */
-.Letras-titulo{
+.nombre-instituto{
     color: var(--color-texto-marca);
     font-family: var(--fuente-titulos);
     font-size: 3rem;
@@ -155,18 +211,18 @@ h2 {
 }
 
 /* Noticias junto al contenido principal. */
-.contenedor-medio {
-    grid-area: middle;
+.contenido {
+    grid-area: contenido;
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
-    grid-template-areas: "side main";
+    grid-template-areas: "lateral principal";
     gap: 15px;
     min-height: 0;
 }
 
 /* Panel de noticias. */
-.barra-lateral {
-    grid-area: side;
+.lateral {
+    grid-area: lateral;
     display: flex;
     flex-direction: column;
     padding: 1.2rem 1rem;
@@ -192,7 +248,7 @@ h2 {
     line-height: 1.5;
 }
 
-.barra-lateral ul {
+.lateral ul {
     display: grid;
     gap: 0.8rem;
     margin: 0;
@@ -225,7 +281,7 @@ h2 {
 }
 
 /* Enlaces de noticias. */
-.barra-lateral a {
+.lateral a {
     color: #1a2430;
     font-size: 0.95rem;
     font-weight: 700;
@@ -234,8 +290,8 @@ h2 {
     transition: opacity 160ms ease, transform 160ms ease;
 }
 
-.barra-lateral a:hover,
-.barra-lateral a:focus-visible {
+.lateral a:hover,
+.lateral a:focus-visible {
     color: #000000;
     text-decoration: underline;
     opacity: 0.92;
@@ -243,8 +299,8 @@ h2 {
 }
 
 /* Contenido principal. */
-.contenido-principal {
-    grid-area: main;
+.principal {
+    grid-area: principal;
     display: grid;
     grid-template-rows: auto minmax(0, 1fr);
     gap: 1rem;
@@ -418,6 +474,10 @@ h2 {
     cursor: pointer;
 }
 
+.album-bachillerato-texto-cerrar {
+    display: none;
+}
+
 .album-bachillerato-resumen::before {
     margin-right: 0.4rem;
     content: "▶";
@@ -444,6 +504,16 @@ h2 {
 #albumes-fila-general-contable:checked ~ .tarjeta-programa-fila-general-contable .album-bachillerato-resumen::before,
 #albumes-fila-software-agro:checked ~ .tarjeta-programa-fila-software-agro .album-bachillerato-resumen::before {
     content: "▼";
+}
+
+#albumes-fila-general-contable:checked ~ .tarjeta-programa-fila-general-contable .album-bachillerato-texto-abrir,
+#albumes-fila-software-agro:checked ~ .tarjeta-programa-fila-software-agro .album-bachillerato-texto-abrir {
+    display: none;
+}
+
+#albumes-fila-general-contable:checked ~ .tarjeta-programa-fila-general-contable .album-bachillerato-texto-cerrar,
+#albumes-fila-software-agro:checked ~ .tarjeta-programa-fila-software-agro .album-bachillerato-texto-cerrar {
+    display: inline;
 }
 
 #albumes-fila-general-contable:focus-visible ~ .tarjeta-programa-fila-general-contable .album-bachillerato-resumen,
@@ -721,7 +791,7 @@ h2 {
 
 /* Pie de pagina. */
 .pie-pagina {
-    grid-area: bottom;
+    grid-area: pie;
     display: grid;
     grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
     align-items: start;
@@ -933,12 +1003,12 @@ h2 {
         gap: 0.15rem 0.75rem;
     }
 
-    .contenedor-medio {
+    .contenido {
         grid-template-columns: minmax(0, 1fr);
         grid-template-rows: minmax(130px, auto) minmax(360px, auto);
         grid-template-areas:
-            "side"
-            "main";
+            "lateral"
+            "principal";
         min-height: 500px;
     }
 
@@ -1362,9 +1432,9 @@ body {
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto minmax(120vh, auto) auto;
     grid-template-areas:
-        "navbar"
-        "middle"
-        "bottom";
+        "navegacion"
+        "contenido"
+        "pie";
     gap: 15px;
     margin: 0;
     padding: 8px;
@@ -1378,7 +1448,7 @@ body {
 }
 
 .barra-navegacion {
-    grid-area: navbar;
+    grid-area: navegacion;
     flex-wrap: nowrap;
     min-height: 72px;
     padding: 0.5rem 1rem;
@@ -1403,8 +1473,8 @@ body {
     background-color: #d2a449;
 }
 
-.contenedor-medio {
-    grid-area: middle;
+.contenido {
+    grid-area: contenido;
 }
 
 .tarjetas-contenido {
@@ -1456,11 +1526,11 @@ body {
 }
 
 /* Colores y tamanos de las tarjetas. */
-.barra-lateral {
+.lateral {
     background: #e9f3ec; 
 }
 
-.contenido-principal {
+.principal {
     background: #fffaf0;
 }
 
@@ -1607,7 +1677,7 @@ body {
 }
 
 /* Orden del contenido principal. */
-.contenido-principal {
+.principal {
     grid-template-rows: auto auto auto auto;
     align-content: start;
 }
@@ -1734,15 +1804,30 @@ body {
 }
 
 /* Fuente de los titulos. */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.Letras-titulo,
-.marca-barra,
-.tarjeta-programa,
+h1{
+    font-family: var(--fuente-titulos);
+    font-weight: 800;
+    text-align: center;
+}
+h2{
+    font-family: var(--fuente-titulos);
+    font-weight: 800;
+    text-align: center;
+}
+.nombre-instituto{
+    font-family: var(--fuente-titulos);
+    font-weight: 800;
+    text-align: center;
+}
+.marca-barra{
+    font-family: var(--fuente-titulos);
+    font-weight: 800;
+}
+.tarjeta-programa h2 {
+    font-family: var(--fuente-titulos);
+    font-weight: 800;
+    text-align: center;
+}
 .tarjeta-contenido h3 {
     font-family: var(--fuente-titulos);
     font-weight: 800;
@@ -2033,13 +2118,13 @@ h6,
     font-size: 1rem;
 }
 
-.barra-lateral h3.actividad-noticia-descripcion {
+.lateral h3.actividad-noticia-descripcion {
     margin: 0 0 0.6rem;
     color: #183b46;
     font-size: 1rem;
 }
 
-.video-facebook-lateral {
+.video-lateral {
     display: block;
     width: min(100%, 267px);
     height: 476px;
@@ -2048,7 +2133,7 @@ h6,
     border-radius: 8px;
 }
 
-.video-facebook-lateral--institucion {
+.video-institucional {
     width: min(100%, 560px);
     height: auto;
     aspect-ratio: 560 / 314;
@@ -2079,7 +2164,7 @@ h6,
         height: 44px;
     }
 
-    .Letras-titulo {
+    .nombre-instituto {
         flex: 1 1 auto;
         min-width: 0;
         font-size: clamp(1rem, 3.8vw, 1.5rem);
@@ -2118,7 +2203,7 @@ h6,
         height: 40px;
     }
 
-    .Letras-titulo {
+    .nombre-instituto {
         font-size: 0.95rem;
     }
 
@@ -2130,47 +2215,80 @@ h6,
     }
 }
 
-a,
-.pie-pagina a,
-.marca-barra,
-.marca-barra .Letras-titulo,
-.enlace-bienvenida,
-.enlace-aula,
-.enlace-con-logo,
-summary,
-.desplegable-contactos summary,
-.noticia-simulacro summary,
-.album-bachillerato-resumen,
+a{
+    font-family: var(--fuente-enlaces);
+}
+.pie-pagina a{
+    font-family: var(--fuente-enlaces);
+}
+.marca-barra{
+    font-family: var(--fuente-enlaces);
+}
+.marca-barra .nombre-instituto{
+    font-family: var(--fuente-enlaces);
+}
+.enlace-bienvenida{
+    font-family: var(--fuente-enlaces);
+}
+.enlace-aula{
+    font-family: var(--fuente-enlaces);
+}
+.enlace-con-logo{
+    font-family: var(--fuente-enlaces);
+}
+summary{
+    font-family: var(--fuente-enlaces);
+}
+.desplegable-contactos summary{
+    font-family: var(--fuente-enlaces);
+}
+.noticia-simulacro summary{
+    font-family: var(--fuente-enlaces);
+}
+.album-bachillerato-resumen{
+    font-family: var(--fuente-enlaces);
+}
 .punto-navegacion {
     font-family: var(--fuente-enlaces);
 }
 
-/* Fuente de los encabezados. */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.Letras-titulo,
-.marca-barra,
-.banner-principal h1,
-.bienvenida h1,
-.programas h2,
-.titulo-lateral {
-    font-family: var(--fuente-titulos);
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    line-height: 1.2;
-}
-
 /* Fuente del texto y las listas. */
-p,
-li,
-.descripcion-noticias-lateral,
-.descripcion-banner-principal,
-.encabezado-programas > p:last-child,
-.lista-contactos,
+p{
+    font-family: var(--fuente-principal);
+    font-weight: 500;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+}
+li{
+    font-family: var(--fuente-principal);
+    font-weight: 500;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+}
+.descripcion-noticias-lateral{
+    font-family: var(--fuente-principal);
+    font-weight: 500;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+}
+.descripcion-banner-principal{
+    font-family: var(--fuente-principal);
+    font-weight: 500;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+}
+.encabezado-programas > p:last-child{
+    font-family: var(--fuente-principal);
+    font-weight: 500;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+}
+.lista-contactos{
+    font-family: var(--fuente-principal);
+    font-weight: 500;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+}
 .pie-pagina a {
     font-family: var(--fuente-principal);
     font-weight: 500;
@@ -2221,7 +2339,7 @@ li,
         flex: 0 0 54px;
     }
 
-    .Letras-titulo {
+    .nombre-instituto {
         min-width: 0;
         font-size: 3rem;
     }
