@@ -14,19 +14,19 @@
         <!-- Escudo y nombre del instituto. -->
         <a class="marca-barra" href="#inicio" aria-label="INEF, inicio">
             <img src="Logos,Imagenes/INEF Logo.jpg" alt="Escudo del Instituto Nacional Ernesto Flores">
-            <span class="Letras-titulo">Instituto Nacional "Ernesto Flores"</span>
+            <span class="nombre-instituto">Instituto Nacional "Ernesto Flores"</span>
         </a>
         <!--Menu hamburguesa para telefonos-->
-        <input class="casilla-menu-navegacion" id="menu-toggle" type="checkbox"
-            aria-label="Abrir o cerrar el menú de navegación" aria-controls="nav-principal">
+        <input class="casilla-menu-navegacion" id="control-menu" type="checkbox"
+            aria-label="Abrir o cerrar el menú de navegación" aria-controls="navegacion-principal">
         <!-- Boton del menu. -->
-        <label class="interruptor-barra" for="menu-toggle" aria-hidden="true">
+        <label class="interruptor-barra" for="control-menu" aria-hidden="true">
             <span></span>
             <span></span>
             <span></span>
         </label>
         <!-- Secciones del sitio. -->
-        <nav class="navegacion-barra" id="nav-principal" aria-label="Navegación principal">
+        <nav class="navegacion-barra" id="navegacion-principal" aria-label="Navegación principal">
             <ul class="enlaces-barra">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#noticias">Noticias</a></li>
@@ -40,10 +40,10 @@
         </nav>
     </header>
     <!-- Noticias y contenido principal. -->
-    <main class="contenedor-medio">
+    <main class="contenido">
         <!-- Noticias y avisos. -->
-        <aside class="barra-lateral" aria-labelledby="side-news-title">
-            <h2 class="titulo-lateral" id="side-news-title">Noticias</h2>
+        <aside class="lateral" aria-labelledby="titulo-noticias">
+            <h2 class="titulo-lateral" id="titulo-noticias">Noticias</h2>
             <p class="descripcion-noticias-lateral">Últimas noticias sobre nuestra institución:</p>
             <br>
             <h3 class="actividad-noticia-descripcion">Reina de las fiestas de Independencia.</h3>
@@ -74,7 +74,7 @@
             </section>
             <section class="video-celebracion-lateral" aria-labelledby="video-institucion-titulo">
                 <h3 id="video-institucion-titulo">Instalaciones e información de nuestra institución</h3>
-                <iframe class="video-facebook-lateral video-facebook-lateral--institucion"
+                <iframe class="video-lateral video-institucional"
                     src="https://www.facebook.com/plugins/video.php?height=314&amp;href=https%3A%2F%2Fwww.facebook.com%2FINEFOFICIAL%2Fvideos%2F446375434304620%2F&amp;show_text=false&amp;width=560&amp;t=0"
                     title="Video de las instalaciones e información del Instituto Nacional Ernesto Flores" width="560"
                     height="314" loading="lazy" scrolling="no"
@@ -83,7 +83,7 @@
             </section>
             <section class="video-celebracion-lateral" aria-labelledby="video-miss-titulo">
                 <h3 id="video-miss-titulo">Miss Independencia</h3>
-                <iframe class="video-facebook-lateral"
+                <iframe class="video-lateral"
                     src="https://www.facebook.com/plugins/video.php?height=476&amp;href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1559886605205144%2F&amp;show_text=false&amp;width=267&amp;t=0"
                     title="Video de Miss Independencia" width="267" height="476" loading="lazy" scrolling="no"
                     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen>
@@ -91,7 +91,7 @@
             </section>
             <section class="video-celebracion-lateral" aria-labelledby="video-madres-titulo">
                 <h3 id="video-madres-titulo">Celebración del Día de las Madres</h3>
-                <iframe class="video-facebook-lateral"
+                <iframe class="video-lateral"
                     src="https://www.facebook.com/plugins/video.php?height=476&amp;href=https%3A%2F%2Fwww.facebook.com%2Freel%2F3352265834952940%2F&amp;show_text=false&amp;width=267&amp;t=0"
                     title="Video de la celebración del Día de las Madres" width="267" height="476" loading="lazy"
                     scrolling="no" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
@@ -100,7 +100,7 @@
             </section>
             <section class="video-celebracion-lateral" aria-labelledby="video-simulacro-titulo">
                 <h3 id="video-simulacro-titulo">Estudiantes en simulacro de terremoto</h3>
-                <iframe class="video-facebook-lateral"
+                <iframe class="video-lateral"
                     src="https://www.facebook.com/plugins/video.php?height=476&amp;href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1088034298842890%2F&amp;show_text=false&amp;width=267&amp;t=0"
                     title="Video de estudiantes en un simulacro de terremoto" width="267" height="476" loading="lazy"
                     scrolling="no" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
@@ -109,12 +109,12 @@
             </section>
         </aside>
         <!-- Contenido principal. -->
-        <section class="contenido-principal" aria-labelledby="welcome-title">
+        <section class="principal" aria-labelledby="titulo-bienvenida">
             <!-- Presentacion y fotos del instituto. -->
             <header class="banner-principal">
                 <div class="contenido-banner-principal">
                     <p class="etiqueta">El Triunfo · Usulután · INEF </p>
-                    <h1 id="welcome-title">Álbum de nuestra institución</h1>
+                    <h1 id="titulo-bienvenida">Álbum de nuestra institución</h1>
                 </div>
                 <!-- Carrusel de fotos. -->
                 <div class="carrusel-contenedor" role="region" aria-label="Galería de las instalaciones del instituto">
@@ -211,8 +211,8 @@
                 </div>
             </header>
             <!-- Contenido, avisos y noticias. -->
-            <section class="tarjetas-contenido tarjetas-contenido--tres" aria-labelledby="resumen-title">
-                <h2 class="solo-lectores-pantalla" id="resumen-title">Contenido institucional y noticias</h2>
+            <section class="tarjetas-contenido tarjetas-contenido--tres" aria-labelledby="titulo-resumen">
+                <h2 class="solo-lectores-pantalla" id="titulo-resumen">Contenido institucional y noticias</h2>
                 <article class="tarjeta-contenido">
                     <h3>Contenido</h3>
                     <p>Conoce los principios que guían nuestro trabajo educativo.</p>
@@ -241,8 +241,8 @@
                 </article>
             </section>
             <!-- Bachilleratos disponibles. -->
-            <section class="grupo-programas" id="programas" aria-labelledby="bachilleratos-title">
-                <h2 id="bachilleratos-title">Ofertas académicas</h2>
+            <section class="grupo-programas" id="programas" aria-labelledby="titulo-bachilleratos">
+                <h2 id="titulo-bachilleratos">Ofertas académicas</h2>
                 <div class="tarjetas-contenido tarjetas-contenido--cuatro">
                     <input class="control-albumes-fila" type="checkbox" id="albumes-fila-general-contable"
                         aria-label="Mostrar u ocultar los álbumes de General y Contable">
@@ -493,8 +493,8 @@
                 </div>
             </section>
             <!-- Informacion del instituto, valores y calendario. -->
-            <section class="grupo-programas" id="mision-vision" aria-labelledby="institucional-title">
-                <h2 id="institucional-title">Información institucional</h2>
+            <section class="grupo-programas" id="mision-vision" aria-labelledby="titulo-institucional">
+                <h2 id="titulo-institucional">Información institucional</h2>
                 <div class="tarjetas-contenido tarjetas-contenido--cuatro">
                     <article class="tarjeta-contenido">
                         <h3>Misión</h3>
